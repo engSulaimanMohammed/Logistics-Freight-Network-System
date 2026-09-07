@@ -12,6 +12,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries warehouse staff information and its warehouse relationship. */
 @Data
 @NoArgsConstructor
 public class StaffDTO {
