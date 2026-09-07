@@ -42,6 +42,7 @@ public class RouteBuildDTO {
     private Long driverId;
 
     @Builder
+    /** Builds route construction data from values transferred through the API. */
     public RouteBuildDTO(Long shipmentId, Date routeDate, String origin, String destination, String status, Long vehicleId, Long driverId) {
         this.shipmentId = shipmentId;
         this.routeDate = routeDate;
