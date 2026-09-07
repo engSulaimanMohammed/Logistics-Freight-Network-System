@@ -16,6 +16,7 @@ public class BaseClass {
     @GeneratedValue
     private Long id;
     private boolean isActive;
+
     private Date createdDate;
     private Date updatedDate;
 }
