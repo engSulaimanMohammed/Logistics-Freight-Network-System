@@ -127,6 +127,7 @@ public class RouteService {
     public Route markComplete(Long routeId) {
         Route route = getById(routeId);
         route.setStatus("Complete");
+
         route.setUpdatedDate(new Date());
         return routeRepository.save(route);
     }
