@@ -43,6 +43,7 @@ public class CustomerController {
         return CustomerDTO.convertToDTO(customerService.getById(id));
     }
 
+    /** Updates the customer identified by {@code id} with the validated DTO fields. */
     @PutMapping("/update/{id}")
     public CustomerDTO update(@PathVariable Long id, @Valid @RequestBody CustomerDTO dto) {
         return CustomerDTO.convertToDTO(customerService.updateCustomer(id, dto.getName(), dto.getEmail(), dto.getPhoneNumber(), dto.getType()));
