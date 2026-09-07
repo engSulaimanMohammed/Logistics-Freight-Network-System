@@ -89,6 +89,7 @@ public class ShipmentItemService {
 
         shipmentItem.setUpdatedDate(new Date());
         shipmentItemRepository.save(shipmentItem);
+
         return true;
     }
 }
