@@ -41,6 +41,7 @@ public class StaffDTO {
     /** Identifier of the warehouse associated with the staff member. */
     private Long warehouseId;
 
+    /** Builds a StaffDTO from values transferred through the API. */
     @Builder
     public StaffDTO(
             Long id,
@@ -55,6 +56,7 @@ public class StaffDTO {
         this.warehouseId = warehouseId;
     }
 
+    /** Converts a Staff entity into its API transfer representation. */
     public static StaffDTO convertToDTO(Staff entity) {
         if (entity == null) {
             return null;
@@ -67,6 +69,7 @@ public class StaffDTO {
                 .build();
     }
 
+    /** Converts a collection of Staff entities into response DTOs. */
     public static List<StaffDTO> convertToDTO(List<Staff> entities) {
         return entities.stream()
                 .map(StaffDTO::convertToDTO)
