@@ -28,13 +28,14 @@ public class ShipmentService {
     private final InventoryItemRepository inventoryItemRepository;
     private final ShipmentItemRepository shipmentItemRepository;
 
-    public ShipmentService(ShipmentRepository shipmentRepository,
-                           WarehouseService warehouseService,
-                           CustomerService customerService,
-                           CarrierService carrierService,
-                           ProductService productService,
-                           InventoryItemRepository inventoryItemRepository,
-                           ShipmentItemRepository shipmentItemRepository) {
+    public ShipmentService(
+            ShipmentRepository shipmentRepository,
+            WarehouseService warehouseService,
+            CustomerService customerService,
+            CarrierService carrierService,
+            ProductService productService,
+            InventoryItemRepository inventoryItemRepository,
+            ShipmentItemRepository shipmentItemRepository) {
         this.shipmentRepository = shipmentRepository;
         this.warehouseService = warehouseService;
         this.customerService = customerService;
