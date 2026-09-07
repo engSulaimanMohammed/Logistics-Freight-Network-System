@@ -118,7 +118,9 @@ public class RouteService {
 
     public List<Route> getRoutesForDriverOnDate(Long driverId, Date routeDate) {
         driverService.getById(driverId);
-        if (routeDate == null) throw new IllegalArgumentException("Route date cannot be null");
+        if (routeDate == null) {
+            throw new IllegalArgumentException("Route date cannot be null");
+        }
         return routeRepository.findRoutesForDriverOnDate(driverId, routeDate);
     }
 
