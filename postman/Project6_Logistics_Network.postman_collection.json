@@ -1,0 +1,1624 @@
+{
+  "info": {
+    "name": "Project 6 - Logistics Network",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Warehouse CRUD",
+      "item": [
+        {
+          "name": "Add Warehouse",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/warehouse/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Central Warehouse\",\n  \"location\": \"Muscat\",\n  \"capacity\": 1000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Warehouse",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/warehouse/getAll"
+          }
+        },
+        {
+          "name": "Get Warehouse By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/warehouse/getById/1"
+          }
+        },
+        {
+          "name": "Update Warehouse",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/warehouse/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Central Warehouse\",\n  \"location\": \"Muscat\",\n  \"capacity\": 1000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Warehouse",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/warehouse/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Product CRUD",
+      "item": [
+        {
+          "name": "Add Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/product/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Laptop\",\n  \"sku\": \"SKU-1001\",\n  \"weightKg\": 2.5,\n  \"category\": \"Electronics\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/product/getAll"
+          }
+        },
+        {
+          "name": "Get Product By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/product/getById/1"
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/product/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Laptop\",\n  \"sku\": \"SKU-1001\",\n  \"weightKg\": 2.5,\n  \"category\": \"Electronics\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/product/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "InventoryItem CRUD",
+      "item": [
+        {
+          "name": "Add InventoryItem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/inventoryItem/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 100,\n  \"shelfLocation\": \"A-01\",\n  \"warehouseId\": 1,\n  \"productId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All InventoryItem",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/inventoryItem/getAll"
+          }
+        },
+        {
+          "name": "Get InventoryItem By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/inventoryItem/getById/1"
+          }
+        },
+        {
+          "name": "Update InventoryItem",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/inventoryItem/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 100,\n  \"shelfLocation\": \"A-01\",\n  \"warehouseId\": 1,\n  \"productId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete InventoryItem",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/inventoryItem/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Customer CRUD",
+      "item": [
+        {
+          "name": "Add Customer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/customer/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ali\",\n  \"email\": \"ali@example.com\",\n  \"phoneNumber\": \"90000000\",\n  \"type\": \"Business\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Customer",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/customer/getAll"
+          }
+        },
+        {
+          "name": "Get Customer By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/customer/getById/1"
+          }
+        },
+        {
+          "name": "Update Customer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/customer/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ali\",\n  \"email\": \"ali@example.com\",\n  \"phoneNumber\": \"90000000\",\n  \"type\": \"Business\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Customer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/customer/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Address CRUD",
+      "item": [
+        {
+          "name": "Add Address",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/address/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"street\": \"Main Street\",\n  \"city\": \"Muscat\",\n  \"postalCode\": \"100\",\n  \"country\": \"Oman\",\n  \"customerId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Address",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/address/getAll"
+          }
+        },
+        {
+          "name": "Get Address By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/address/getById/1"
+          }
+        },
+        {
+          "name": "Update Address",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/address/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"street\": \"Main Street\",\n  \"city\": \"Muscat\",\n  \"postalCode\": \"100\",\n  \"country\": \"Oman\",\n  \"customerId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Address",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/address/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Shipment CRUD",
+      "item": [
+        {
+          "name": "Add Shipment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipment/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentDate\": \"2026-09-06T08:00:00.000+00:00\",\n  \"status\": \"Created\",\n  \"totalWeight\": 2.5,\n  \"warehouseId\": 1,\n  \"customerId\": 1,\n  \"carrierId\": 1,\n  \"shipmentItems\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Shipment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/shipment/getAll"
+          }
+        },
+        {
+          "name": "Get Shipment By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/shipment/getById/1"
+          }
+        },
+        {
+          "name": "Update Shipment",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipment/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentDate\": \"2026-09-06T08:00:00.000+00:00\",\n  \"status\": \"Created\",\n  \"totalWeight\": 2.5,\n  \"warehouseId\": 1,\n  \"customerId\": 1,\n  \"carrierId\": 1,\n  \"shipmentItems\": []\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Shipment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/shipment/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ShipmentItem CRUD",
+      "item": [
+        {
+          "name": "Add ShipmentItem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipmentItem/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 1,\n  \"shipmentId\": 1,\n  \"productId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All ShipmentItem",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/shipmentItem/getAll"
+          }
+        },
+        {
+          "name": "Get ShipmentItem By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/shipmentItem/getById/1"
+          }
+        },
+        {
+          "name": "Update ShipmentItem",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipmentItem/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 1,\n  \"shipmentId\": 1,\n  \"productId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete ShipmentItem",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/shipmentItem/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Carrier CRUD",
+      "item": [
+        {
+          "name": "Add Carrier",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/carrier/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Oman Freight\",\n  \"contactEmail\": \"contact@example.com\",\n  \"phoneNumber\": \"91000000\",\n  \"country\": \"Oman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Carrier",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/carrier/getAll"
+          }
+        },
+        {
+          "name": "Get Carrier By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/carrier/getById/1"
+          }
+        },
+        {
+          "name": "Update Carrier",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/carrier/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Oman Freight\",\n  \"contactEmail\": \"contact@example.com\",\n  \"phoneNumber\": \"91000000\",\n  \"country\": \"Oman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Carrier",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/carrier/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vehicle CRUD",
+      "item": [
+        {
+          "name": "Add Vehicle",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/vehicle/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"plateNumber\": \"OM-1001\",\n  \"type\": \"Truck\",\n  \"capacityKg\": 1000.0,\n  \"status\": \"Available\",\n  \"carrierId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Vehicle",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/vehicle/getAll"
+          }
+        },
+        {
+          "name": "Get Vehicle By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/vehicle/getById/1"
+          }
+        },
+        {
+          "name": "Update Vehicle",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/vehicle/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"plateNumber\": \"OM-1001\",\n  \"type\": \"Truck\",\n  \"capacityKg\": 1000.0,\n  \"status\": \"Available\",\n  \"carrierId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Vehicle",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/vehicle/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Driver CRUD",
+      "item": [
+        {
+          "name": "Add Driver",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/driver/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ahmed\",\n  \"licenseNumber\": \"LIC-1001\",\n  \"phoneNumber\": \"92000000\",\n  \"status\": \"Available\",\n  \"carrierId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Driver",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/driver/getAll"
+          }
+        },
+        {
+          "name": "Get Driver By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/driver/getById/1"
+          }
+        },
+        {
+          "name": "Update Driver",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/driver/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Ahmed\",\n  \"licenseNumber\": \"LIC-1001\",\n  \"phoneNumber\": \"92000000\",\n  \"status\": \"Available\",\n  \"carrierId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Driver",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/driver/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Route CRUD",
+      "item": [
+        {
+          "name": "Add Route",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/route/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeDate\": \"2026-09-07T10:00:00.000+00:00\",\n  \"origin\": \"Muscat\",\n  \"destination\": \"Sohar\",\n  \"status\": \"Planned\",\n  \"vehicleId\": 1,\n  \"driverId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Route",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/route/getAll"
+          }
+        },
+        {
+          "name": "Get Route By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/route/getById/1"
+          }
+        },
+        {
+          "name": "Update Route",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/route/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeDate\": \"2026-09-07T10:00:00.000+00:00\",\n  \"origin\": \"Muscat\",\n  \"destination\": \"Sohar\",\n  \"status\": \"Planned\",\n  \"vehicleId\": 1,\n  \"driverId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Route",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/route/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DeliveryStop CRUD",
+      "item": [
+        {
+          "name": "Add DeliveryStop",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/deliveryStop/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sequence\": 1,\n  \"address\": \"Sohar Industrial Area\",\n  \"status\": \"Pending\",\n  \"eta\": \"2030-01-01T10:00:00.000+00:00\",\n  \"routeId\": 1,\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All DeliveryStop",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/deliveryStop/getAll"
+          }
+        },
+        {
+          "name": "Get DeliveryStop By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/deliveryStop/getById/1"
+          }
+        },
+        {
+          "name": "Update DeliveryStop",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/deliveryStop/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sequence\": 1,\n  \"address\": \"Sohar Industrial Area\",\n  \"status\": \"Pending\",\n  \"eta\": \"2030-01-01T10:00:00.000+00:00\",\n  \"routeId\": 1,\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete DeliveryStop",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/deliveryStop/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "TrackingEvent CRUD",
+      "item": [
+        {
+          "name": "Add TrackingEvent",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/trackingEvent/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventTime\": \"2026-09-06T09:00:00.000+00:00\",\n  \"location\": \"Muscat\",\n  \"status\": \"Picked Up\",\n  \"note\": \"Shipment picked up\",\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All TrackingEvent",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/trackingEvent/getAll"
+          }
+        },
+        {
+          "name": "Get TrackingEvent By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/trackingEvent/getById/1"
+          }
+        },
+        {
+          "name": "Update TrackingEvent",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/trackingEvent/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventTime\": \"2026-09-06T09:00:00.000+00:00\",\n  \"location\": \"Muscat\",\n  \"status\": \"Picked Up\",\n  \"note\": \"Shipment picked up\",\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete TrackingEvent",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/trackingEvent/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Invoice CRUD",
+      "item": [
+        {
+          "name": "Add Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/invoice/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 50.0,\n  \"status\": \"Unpaid\",\n  \"issuedDate\": \"2026-09-06T09:00:00.000+00:00\",\n  \"shipmentId\": 1,\n  \"customerId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Invoice",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/invoice/getAll"
+          }
+        },
+        {
+          "name": "Get Invoice By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/invoice/getById/1"
+          }
+        },
+        {
+          "name": "Update Invoice",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/invoice/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 50.0,\n  \"status\": \"Unpaid\",\n  \"issuedDate\": \"2026-09-06T09:00:00.000+00:00\",\n  \"shipmentId\": 1,\n  \"customerId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Invoice",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/invoice/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Staff CRUD",
+      "item": [
+        {
+          "name": "Add Staff",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/staff/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Salim\",\n  \"role\": \"Supervisor\",\n  \"phoneNumber\": \"93000000\",\n  \"warehouseId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All Staff",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/staff/getAll"
+          }
+        },
+        {
+          "name": "Get Staff By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/staff/getById/1"
+          }
+        },
+        {
+          "name": "Update Staff",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/staff/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Salim\",\n  \"role\": \"Supervisor\",\n  \"phoneNumber\": \"93000000\",\n  \"warehouseId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete Staff",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/staff/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ServiceZone CRUD",
+      "item": [
+        {
+          "name": "Add ServiceZone",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/serviceZone/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"North Zone\",\n  \"region\": \"Al Batinah\",\n  \"baseRate\": 10.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get All ServiceZone",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/serviceZone/getAll"
+          }
+        },
+        {
+          "name": "Get ServiceZone By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/serviceZone/getById/1"
+          }
+        },
+        {
+          "name": "Update ServiceZone",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/serviceZone/update/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"North Zone\",\n  \"region\": \"Al Batinah\",\n  \"baseRate\": 10.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Soft Delete ServiceZone",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/serviceZone/delete/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Phase 4 Business Operations",
+      "item": [
+        {
+          "name": "Create Shipment With Items",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipment/create",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentDate\": \"2026-09-06T08:00:00.000+00:00\",\n  \"status\": \"Created\",\n  \"warehouseId\": 1,\n  \"customerId\": 1,\n  \"shipmentItems\": [\n    {\n      \"quantity\": 2,\n      \"productId\": 1\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Assign Shipment To Carrier",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipment/assignCarrier",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentId\": 1,\n  \"carrierId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Build Route",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/route/build",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentId\": 1,\n  \"routeDate\": \"2026-09-07T10:00:00.000+00:00\",\n  \"origin\": \"Muscat\",\n  \"destination\": \"Sohar\",\n  \"status\": \"Planned\",\n  \"vehicleId\": 1,\n  \"driverId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Add Delivery Stop To Route",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/deliveryStop/addToRoute",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sequence\": 1,\n  \"address\": \"Sohar Industrial Area\",\n  \"status\": \"Pending\",\n  \"eta\": \"2030-01-01T10:00:00.000+00:00\",\n  \"routeId\": 1,\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Append Picked Up Tracking Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/trackingEvent/append",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventTime\": \"2026-09-06T09:00:00.000+00:00\",\n  \"location\": \"Muscat\",\n  \"status\": \"Picked Up\",\n  \"note\": \"Shipment picked up\",\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Append In Transit Tracking Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/trackingEvent/append",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventTime\": \"2026-09-06T09:00:00.000+00:00\",\n  \"location\": \"Muscat\",\n  \"status\": \"In Transit\",\n  \"note\": \"Shipment in transit\",\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Append Delivered Tracking Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/trackingEvent/append",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"eventTime\": \"2026-09-06T09:00:00.000+00:00\",\n  \"location\": \"Muscat\",\n  \"status\": \"Delivered\",\n  \"note\": \"Shipment delivered\",\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Complete Delivery Stop",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/deliveryStop/complete",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"deliveryStopId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Generate Invoice For Delivered Shipment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/invoice/generate",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 50.0,\n  \"status\": \"Unpaid\",\n  \"issuedDate\": \"2026-09-06T09:00:00.000+00:00\",\n  \"shipmentId\": 1,\n  \"customerId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Unpaid Invoices By Customer",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/invoice/unpaidByCustomer/1"
+          }
+        },
+        {
+          "name": "Shipments By Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/shipment/byStatus/Delivered"
+          }
+        },
+        {
+          "name": "Inventory Below Reorder Threshold",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/inventoryItem/belowThreshold/20"
+          }
+        },
+        {
+          "name": "Routes For Driver On Date",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/route/byDriverAndDate/1?routeDate=2026-09-07T10:00:00.000%2B00:00"
+          }
+        },
+        {
+          "name": "Available Vehicles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/vehicle/available"
+          }
+        },
+        {
+          "name": "Customer Shipment History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/shipment/customerHistory/1"
+          }
+        },
+        {
+          "name": "Warehouse Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/warehouse/stats/1"
+          }
+        },
+        {
+          "name": "Carrier Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/carrier/stats/1"
+          }
+        },
+        {
+          "name": "Customer Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/customer/stats/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Phase 5 Error Cases",
+      "item": [
+        {
+          "name": "Bad ID - 404",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/warehouse/getById/999999"
+          }
+        },
+        {
+          "name": "Blank Warehouse Name - 400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/warehouse/add",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"\",\n  \"location\": \"Muscat\",\n  \"capacity\": 1000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Bad Shipment Date - 400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipment/create",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentDate\": \"2030-01-01T08:00:00.000+00:00\",\n  \"status\": \"Created\",\n  \"warehouseId\": 1,\n  \"customerId\": 1,\n  \"shipmentItems\": [\n    {\n      \"quantity\": 1,\n      \"productId\": 1\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Out Of Stock Shipment - 400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/shipment/create",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentDate\": \"2026-09-06T08:00:00.000+00:00\",\n  \"status\": \"Created\",\n  \"warehouseId\": 1,\n  \"customerId\": 1,\n  \"shipmentItems\": [\n    {\n      \"quantity\": 999999,\n      \"productId\": 1\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Over Capacity Vehicle - 400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/route/build",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentId\": 1,\n  \"routeDate\": \"2026-09-07T10:00:00.000+00:00\",\n  \"origin\": \"Muscat\",\n  \"destination\": \"Sohar\",\n  \"status\": \"Planned\",\n  \"vehicleId\": 1,\n  \"driverId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Duplicate Stop Sequence - 400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/deliveryStop/addToRoute",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sequence\": 1,\n  \"address\": \"Sohar Industrial Area\",\n  \"status\": \"Pending\",\n  \"eta\": \"2030-01-01T10:00:00.000+00:00\",\n  \"routeId\": 1,\n  \"shipmentId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Unavailable Vehicle Or Driver - 400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/route/build",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"shipmentId\": 1,\n  \"routeDate\": \"2026-09-07T10:00:00.000+00:00\",\n  \"origin\": \"Muscat\",\n  \"destination\": \"Sohar\",\n  \"status\": \"Planned\",\n  \"vehicleId\": 1,\n  \"driverId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Invoice Before Delivered - 400",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/invoice/generate",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 50.0,\n  \"status\": \"Unpaid\",\n  \"issuedDate\": \"2026-09-06T09:00:00.000+00:00\",\n  \"shipmentId\": 1,\n  \"customerId\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

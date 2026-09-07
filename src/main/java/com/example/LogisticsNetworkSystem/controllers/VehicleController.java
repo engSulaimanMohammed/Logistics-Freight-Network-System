@@ -1,0 +1,56 @@
+package com.example.LogisticsNetworkSystem.controllers;
+
+import com.example.LogisticsNetworkSystem.dtos.VehicleDTO;
+import com.example.LogisticsNetworkSystem.entities.Vehicle;
+import com.example.LogisticsNetworkSystem.services.VehicleService;
+import jakarta.validation.Valid;
+import java.util.List;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/vehicle")
+public class VehicleController {
+
+    private final VehicleService vehicleService;
+
+    public VehicleController(VehicleService vehicleService) {
+        this.vehicleService = vehicleService;
+    }
+
+    @PostMapping("/add")
+    public VehicleDTO add(@Valid @RequestBody VehicleDTO dto) {
+        Vehicle vehicle = new Vehicle();
+        vehicle.setPlateNumber(dto.getPlateNumber());
+        vehicle.setType(dto.getType());
+        vehicle.setCapacityKg(dto.getCapacityKg());
+        vehicle.setStatus(dto.getStatus());
+        return VehicleDTO.convertToDTO(vehicleService.addVehicle(vehicle, dto.getCarrierId()));
+    }
+
+    @GetMapping("/getAll")
+    public List<VehicleDTO> getAll() {
+        return VehicleDTO.convertToDTO(vehicleService.getAllVehicles());
+    }
+
+    @GetMapping("/getById/{id}")
+    public VehicleDTO getById(@PathVariable Long id) {
+        return VehicleDTO.convertToDTO(vehicleService.getById(id));
+    }
+
+    @PutMapping("/update/{id}")
+    public VehicleDTO update(@PathVariable Long id, @Valid @RequestBody VehicleDTO dto) {
+        return VehicleDTO.convertToDTO(vehicleService.updateVehicle(id, dto.getPlateNumber(), dto.getType(), dto.getCapacityKg(), dto.getStatus(), dto.getCarrierId()));
+    }
+
+@GetMapping("/available")
+public List<VehicleDTO> getAvailable() {
+    return VehicleDTO.convertToDTO(vehicleService.getAvailableVehicles());
+}
+
+    @DeleteMapping("/delete/{id}")
+    public VehicleDTO delete(@PathVariable Long id) {
+        VehicleDTO dto = VehicleDTO.convertToDTO(vehicleService.getById(id));
+        vehicleService.deleteById(id);
+        return dto;
+    }
+}

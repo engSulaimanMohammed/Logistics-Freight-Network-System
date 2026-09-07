@@ -1,0 +1,18 @@
+Project 6: Logistics & Freight Network System - Debugging Log
+
+This file is required by the project. Record every runtime/Postman error encountered during your own execution.
+Do not invent entries: add the HTTP status, cause, and fix for each real error you see.
+
+Entry format:
+--------------------------------------------------
+Error:
+HTTP Status:
+Cause:
+Fix:
+Result:
+--------------------------------------------------
+
+Source-generation review:
+- No credentials are stored in application.properties; DB credentials are read from environment variables.
+- The generated source implements the 16 required entities, CRUD, DTO-only responses, soft delete,
+  Phase 4 business operations, custom queries, statistics, validation, and exception handling.

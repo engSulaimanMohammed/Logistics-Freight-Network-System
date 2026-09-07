@@ -1,0 +1,90 @@
+package com.example.LogisticsNetworkSystem.dtos;
+
+import com.example.LogisticsNetworkSystem.entities.Shipment;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
+import jakarta.validation.constraints.Size;
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class ShipmentDTO {
+
+    private Long id;
+
+    @NotNull(message = "shipmentDate cannot be null")
+    @PastOrPresent(message = "shipmentDate cannot be in the future")
+    private Date shipmentDate;
+
+    @NotBlank(message = "status cannot be blank")
+    @Size(max = 255, message = "status cannot exceed 255 characters")
+    private String status;
+
+    @PositiveOrZero(message = "totalWeight cannot be negative")
+    private Double totalWeight;
+
+    @NotNull(message = "warehouseId cannot be null")
+    @Positive(message = "warehouseId must be greater than zero")
+    private Long warehouseId;
+
+    @NotNull(message = "customerId cannot be null")
+    @Positive(message = "customerId must be greater than zero")
+    private Long customerId;
+
+    @Positive(message = "carrierId must be greater than zero")
+    private Long carrierId;
+
+    @Valid
+    private List<ShipmentItemDTO> shipmentItems;
+
+    @Builder
+    public ShipmentDTO(
+            Long id,
+            Date shipmentDate,
+            String status,
+            Double totalWeight,
+            Long warehouseId,
+            Long customerId,
+            Long carrierId,
+            List<ShipmentItemDTO> shipmentItems) {
+        this.id = id;
+        this.shipmentDate = shipmentDate;
+        this.status = status;
+        this.totalWeight = totalWeight;
+        this.warehouseId = warehouseId;
+        this.customerId = customerId;
+        this.carrierId = carrierId;
+        this.shipmentItems = shipmentItems;
+    }
+
+    public static ShipmentDTO convertToDTO(Shipment entity) {
+        if (entity == null) {
+            return null;
+        }
+        return ShipmentDTO.builder()
+.id(entity.getId())
+                .shipmentDate(entity.getShipmentDate())
+                .status(entity.getStatus())
+                .totalWeight(entity.getTotalWeight())
+                .warehouseId(entity.getWarehouse() == null ? null : entity.getWarehouse().getId())
+                .customerId(entity.getCustomer() == null ? null : entity.getCustomer().getId())
+                .carrierId(entity.getCarrier() == null ? null : entity.getCarrier().getId())
+                .shipmentItems(ShipmentItemDTO.convertToDTO(entity.getShipmentItems()))
+                .build();
+    }
+
+    public static List<ShipmentDTO> convertToDTO(List<Shipment> entities) {
+        return entities.stream()
+                .map(ShipmentDTO::convertToDTO)
+                .collect(Collectors.toList());
+    }
+}
