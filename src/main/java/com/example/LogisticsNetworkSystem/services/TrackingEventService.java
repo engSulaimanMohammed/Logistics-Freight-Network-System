@@ -22,7 +22,9 @@ public class TrackingEventService {
     }
 
     private void validateData(Date eventTime, String location, String status, String note) {
-        if (eventTime == null) throw new IllegalArgumentException("Event time cannot be null");
+        if (eventTime == null) {
+            throw new IllegalArgumentException("Event time cannot be null");
+        }
         if (eventTime.after(new Date())) throw new IllegalArgumentException("Event time cannot be in the future");
         if (location == null || location.trim().isEmpty()) throw new IllegalArgumentException("Location cannot be blank");
         if (location.length() > 255) throw new IllegalArgumentException("Location cannot exceed 255 characters");
