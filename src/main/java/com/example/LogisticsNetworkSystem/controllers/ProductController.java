@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
+/** Exposes REST operations for product catalog management. */
 @RestController
 @RequestMapping("/product")
 public class ProductController {
