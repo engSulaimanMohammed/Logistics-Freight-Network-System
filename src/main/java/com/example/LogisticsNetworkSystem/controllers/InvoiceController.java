@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/invoice")
 public class InvoiceController {
+    /** Coordinates invoice persistence and business workflows through the service layer. */
     private final InvoiceService invoiceService;
 
     public InvoiceController(InvoiceService invoiceService) {
