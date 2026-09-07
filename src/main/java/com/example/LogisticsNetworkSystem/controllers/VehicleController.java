@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
+/** Exposes REST operations for vehicle management and availability queries. */
 @RestController
 @RequestMapping("/vehicle")
 public class VehicleController {
