@@ -61,21 +61,25 @@ public class ShipmentController {
                 dto.getWarehouseId(), dto.getCustomerId(), dto.getCarrierId()));
     }
 
+    /** Assigns the carrier identified in the request body to a shipment. */
     @PutMapping("/assignCarrier")
     public ShipmentDTO assignCarrier(@Valid @RequestBody ShipmentCarrierAssignmentDTO dto) {
         return ShipmentDTO.convertToDTO(shipmentService.assignCarrier(dto.getShipmentId(), dto.getCarrierId()));
     }
 
+    /** Retrieves shipments matching the requested status path variable. */
     @GetMapping("/byStatus/{status}")
     public List<ShipmentDTO> getByStatus(@PathVariable String status) {
         return ShipmentDTO.convertToDTO(shipmentService.getByStatus(status));
     }
 
+    /** Retrieves shipment history for the customer identified by {@code customerId}. */
     @GetMapping("/customerHistory/{customerId}")
     public List<ShipmentDTO> getCustomerHistory(@PathVariable Long customerId) {
         return ShipmentDTO.convertToDTO(shipmentService.getCustomerShipmentHistory(customerId));
     }
 
+    /** Deletes the selected shipment and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public ShipmentDTO delete(@PathVariable Long id) {
         ShipmentDTO dto = ShipmentDTO.convertToDTO(shipmentService.getById(id));
