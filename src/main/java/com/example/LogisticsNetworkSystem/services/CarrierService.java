@@ -93,7 +93,12 @@ public class CarrierService {
         return carrier;
     }
 
-    public Carrier updateCarrier(Long id, String name, String contactEmail, String phoneNumber, String country) {
+    public Carrier updateCarrier(
+            Long id,
+            String name,
+            String contactEmail,
+            String phoneNumber,
+            String country) {
         validateCarrierData(name, contactEmail, phoneNumber, country);
         Carrier carrier = getById(id);
         carrier.setName(name);
