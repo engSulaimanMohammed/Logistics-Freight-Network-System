@@ -14,7 +14,9 @@ public class DriverService {
     private final DriverRepository driverRepository;
     private final CarrierService carrierService;
 
-    public DriverService(DriverRepository driverRepository, CarrierService carrierService) {
+    public DriverService(
+            DriverRepository driverRepository,
+            CarrierService carrierService) {
         this.driverRepository = driverRepository;
         this.carrierService = carrierService;
     }
