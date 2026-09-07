@@ -30,6 +30,7 @@ public class ProductController {
         return ProductDTO.convertToDTO(productService.addProduct(product));
     }
 
+    /** Returns all products as response DTOs. */
     @GetMapping("/getAll")
     public List<ProductDTO> getAll() {
         return ProductDTO.convertToDTO(productService.getAllProducts());
