@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
+/** Exposes REST operations for warehouse management and warehouse statistics. */
 @RestController
 @RequestMapping("/warehouse")
 public class WarehouseController {
