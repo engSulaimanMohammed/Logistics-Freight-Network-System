@@ -47,8 +47,8 @@ public class ServiceZoneController {
         return ServiceZoneDTO.convertToDTO(serviceZoneService.updateServiceZone(id, dto.getName(), dto.getRegion(), dto.getBaseRate()));
     }
 
+    /** Deletes the selected service zone and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
-    // Removes the selected service zone and returns its DTO representation.
     public ServiceZoneDTO delete(@PathVariable Long id) {
         ServiceZoneDTO dto = ServiceZoneDTO.convertToDTO(serviceZoneService.getById(id));
         serviceZoneService.deleteById(id);
