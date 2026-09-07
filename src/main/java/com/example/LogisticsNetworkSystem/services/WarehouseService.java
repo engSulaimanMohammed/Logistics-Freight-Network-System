@@ -61,7 +61,9 @@ public class WarehouseService {
     }
 
     public List<Warehouse> getAllWarehouses() {
-        return warehouseRepository.findAll().stream().filter(Warehouse::isActive).toList();
+        return warehouseRepository.findAll().stream()
+                .filter(Warehouse::isActive)
+                .toList();
     }
 
     public Warehouse getById(Long id) {
