@@ -17,29 +17,36 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RouteDTO {
 
+    /** Unique identifier of the route. */
     private Long id;
 
     @NotNull(message = "routeDate cannot be null")
+    /** Date and time scheduled for the route. */
     private Date routeDate;
 
     @NotBlank(message = "origin cannot be blank")
     @Size(max = 255, message = "origin cannot exceed 255 characters")
+    /** Starting location of the route. */
     private String origin;
 
     @NotBlank(message = "destination cannot be blank")
     @Size(max = 255, message = "destination cannot exceed 255 characters")
+    /** Ending location of the route. */
     private String destination;
 
     @NotBlank(message = "status cannot be blank")
     @Size(max = 255, message = "status cannot exceed 255 characters")
+    /** Current status of the route. */
     private String status;
 
     @NotNull(message = "vehicleId cannot be null")
     @Positive(message = "vehicleId must be greater than zero")
+    /** Identifier of the vehicle assigned to the route. */
     private Long vehicleId;
 
     @NotNull(message = "driverId cannot be null")
     @Positive(message = "driverId must be greater than zero")
+    /** Identifier of the driver assigned to the route. */
     private Long driverId;
 
     @Builder
