@@ -6,9 +6,9 @@ import lombok.Getter;
 import lombok.Setter;
 import java.util.Date;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Invoice extends BaseClass {
     private Double amount;
     private String status;
