@@ -55,7 +55,8 @@ public class InvoiceService {
         if (!"Delivered".equalsIgnoreCase(shipment.getStatus())) {
             throw new IllegalArgumentException("Invoice cannot be generated before shipment is delivered");
         }
-        validateData(invoice.getAmount(), "Unpaid", invoice.getIssuedDate());
+        validateData(
+                invoice.getAmount(), "Unpaid", invoice.getIssuedDate());
         Customer customer = shipment.getCustomer();
         invoice.setShipment(shipment);
         invoice.setCustomer(customer);
