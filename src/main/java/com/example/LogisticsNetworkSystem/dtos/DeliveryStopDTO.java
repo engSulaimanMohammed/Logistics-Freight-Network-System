@@ -18,30 +18,37 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DeliveryStopDTO {
 
+    /** Unique identifier of the delivery stop. */
     private Long id;
 
     @NotNull(message = "sequence cannot be null")
     @Positive(message = "sequence must be greater than zero")
+    /** Position of the stop within its route. */
     private Integer sequence;
 
     @NotBlank(message = "address cannot be blank")
     @Size(max = 255, message = "address cannot exceed 255 characters")
+    /** Delivery location represented by the stop. */
     private String address;
 
     @NotBlank(message = "status cannot be blank")
     @Size(max = 255, message = "status cannot exceed 255 characters")
+    /** Current status of the delivery stop. */
     private String status;
 
     @NotNull(message = "eta cannot be null")
     @Future(message = "eta must be in the future")
+    /** Estimated arrival time for the delivery stop. */
     private Date eta;
 
     @NotNull(message = "routeId cannot be null")
     @Positive(message = "routeId must be greater than zero")
+    /** Identifier of the route containing the stop. */
     private Long routeId;
 
     @NotNull(message = "shipmentId cannot be null")
     @Positive(message = "shipmentId must be greater than zero")
+    /** Identifier of the shipment handled at the stop. */
     private Long shipmentId;
 
     @Builder
