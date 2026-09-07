@@ -5,9 +5,9 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class InventoryItem extends BaseClass {
     private Integer quantity;
     private String shelfLocation;
