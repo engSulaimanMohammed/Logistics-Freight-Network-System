@@ -75,7 +75,8 @@ public class ServiceZoneService {
             String name,
             String region,
             Double baseRate) {
-        validateServiceZoneData(name, region, baseRate);
+        validateServiceZoneData(
+                name, region, baseRate);
         ServiceZone serviceZone = getById(id);
         serviceZone.setName(name);
         serviceZone.setRegion(region);
