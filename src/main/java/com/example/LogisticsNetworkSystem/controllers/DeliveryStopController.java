@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/deliveryStop")
 public class DeliveryStopController {
+    /** Coordinates delivery stop persistence and route operations through the service layer. */
     private final DeliveryStopService deliveryStopService;
 
     public DeliveryStopController(DeliveryStopService deliveryStopService) {
