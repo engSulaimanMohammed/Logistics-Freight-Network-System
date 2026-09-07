@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/trackingEvent")
 public class TrackingEventController {
+    /** Coordinates tracking event persistence and shipment history through the service layer. */
     private final TrackingEventService trackingEventService;
 
     public TrackingEventController(TrackingEventService trackingEventService) {
