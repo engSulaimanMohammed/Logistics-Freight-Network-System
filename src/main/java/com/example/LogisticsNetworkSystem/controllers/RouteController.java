@@ -45,11 +45,13 @@ public class RouteController {
                 route, dto.getVehicleId(), dto.getDriverId(), dto.getShipmentId()));
     }
 
+    /** Returns all routes as response DTOs. */
     @GetMapping("/getAll")
     public List<RouteDTO> getAll() {
         return RouteDTO.convertToDTO(routeService.getAllRoutes());
     }
 
+    /** Retrieves the route identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public RouteDTO getById(@PathVariable Long id) {
         return RouteDTO.convertToDTO(routeService.getById(id));
