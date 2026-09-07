@@ -22,7 +22,8 @@ public class ProductService {
             String sku,
             Double weightKg,
             String category) {
-        if (name == null || name.trim().isEmpty()) {
+        if (name == null
+                || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be blank");
         }
         if (name.length() > 255) {
