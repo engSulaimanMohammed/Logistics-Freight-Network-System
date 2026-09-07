@@ -17,7 +17,10 @@ public class ServiceZoneService {
         this.serviceZoneRepository = serviceZoneRepository;
     }
 
-    private void validateServiceZoneData(String name, String region, Double baseRate) {
+    private void validateServiceZoneData(
+            String name,
+            String region,
+            Double baseRate) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be blank");
         }
