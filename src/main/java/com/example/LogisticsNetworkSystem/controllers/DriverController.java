@@ -36,6 +36,7 @@ public class DriverController {
         return DriverDTO.convertToDTO(driverService.getAllDrivers());
     }
 
+    /** Retrieves the driver identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public DriverDTO getById(@PathVariable Long id) {
         return DriverDTO.convertToDTO(driverService.getById(id));
