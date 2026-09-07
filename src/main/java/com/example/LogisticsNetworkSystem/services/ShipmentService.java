@@ -83,7 +83,11 @@ public class ShipmentService {
     }
 
     @Transactional
-    public Shipment createShipment(Shipment shipment, Long warehouseId, Long customerId, List<ShipmentItemDTO> items) {
+    public Shipment createShipment(
+            Shipment shipment,
+            Long warehouseId,
+            Long customerId,
+            List<ShipmentItemDTO> items) {
         if (items == null || items.isEmpty()) {
             throw new IllegalArgumentException("Shipment must contain ShipmentItems");
         }
