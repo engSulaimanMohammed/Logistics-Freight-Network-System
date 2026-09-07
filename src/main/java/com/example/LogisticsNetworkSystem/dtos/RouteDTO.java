@@ -49,6 +49,7 @@ public class RouteDTO {
     /** Identifier of the driver assigned to the route. */
     private Long driverId;
 
+    /** Builds a RouteDTO from values transferred through the API. */
     @Builder
     public RouteDTO(
             Long id,
@@ -67,6 +68,7 @@ public class RouteDTO {
         this.driverId = driverId;
     }
 
+    /** Converts a Route entity into its API transfer representation. */
     public static RouteDTO convertToDTO(Route entity) {
         if (entity == null) {
             return null;
@@ -82,6 +84,7 @@ public class RouteDTO {
                 .build();
     }
 
+    /** Converts a collection of Route entities into response DTOs. */
     public static List<RouteDTO> convertToDTO(List<Route> entities) {
         return entities.stream()
                 .map(RouteDTO::convertToDTO)
