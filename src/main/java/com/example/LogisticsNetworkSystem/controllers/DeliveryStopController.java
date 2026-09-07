@@ -38,11 +38,13 @@ public class DeliveryStopController {
         return add(dto);
     }
 
+    /** Returns all delivery stops as response DTOs. */
     @GetMapping("/getAll")
     public List<DeliveryStopDTO> getAll() {
         return DeliveryStopDTO.convertToDTO(deliveryStopService.getAllDeliveryStops());
     }
 
+    /** Retrieves the delivery stop identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public DeliveryStopDTO getById(@PathVariable Long id) {
         return DeliveryStopDTO.convertToDTO(deliveryStopService.getById(id));
