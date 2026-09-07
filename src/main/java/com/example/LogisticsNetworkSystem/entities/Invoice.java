@@ -13,6 +13,7 @@ import lombok.Setter;
 public class Invoice extends BaseClass {
     private Double amount;
     private String status;
+
     private Date issuedDate;
 
     @ManyToOne
