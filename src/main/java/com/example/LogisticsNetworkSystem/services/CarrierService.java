@@ -67,7 +67,8 @@ public class CarrierService {
         if (carrier == null) {
             throw new IllegalArgumentException("Carrier cannot be null");
         }
-        validateCarrierData(carrier.getName(), carrier.getContactEmail(), carrier.getPhoneNumber(), carrier.getCountry());
+        validateCarrierData(
+                carrier.getName(), carrier.getContactEmail(), carrier.getPhoneNumber(), carrier.getCountry());
         carrier.setActive(true);
         carrier.setCreatedDate(new Date());
         return carrierRepository.save(carrier);
