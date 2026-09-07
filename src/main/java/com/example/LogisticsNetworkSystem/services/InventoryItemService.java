@@ -101,6 +101,7 @@ public class InventoryItemService {
     public boolean deleteById(Long id) {
         InventoryItem inventoryItem = getById(id);
         inventoryItem.setActive(false);
+
         inventoryItem.setUpdatedDate(new Date());
         inventoryItemRepository.save(inventoryItem);
         return true;
