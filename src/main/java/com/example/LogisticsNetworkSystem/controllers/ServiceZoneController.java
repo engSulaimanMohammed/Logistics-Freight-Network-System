@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/serviceZone")
 public class ServiceZoneController {
 
-    // Delegates service zone creation, updates, and lookups to the service layer.
+    /** Coordinates service zone persistence and lookups through the service layer. */
     private final ServiceZoneService serviceZoneService;
 
     public ServiceZoneController(ServiceZoneService serviceZoneService) {
