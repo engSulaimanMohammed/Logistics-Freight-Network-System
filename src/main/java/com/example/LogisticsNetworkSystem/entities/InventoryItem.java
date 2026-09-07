@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class InventoryItem extends BaseClass {
+
     private Integer quantity;
     private String shelfLocation;
 
