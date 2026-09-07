@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/shipmentItem")
 public class ShipmentItemController {
 
+    /** Coordinates shipment item persistence and shipment/product associations. */
     private final ShipmentItemService shipmentItemService;
 
     public ShipmentItemController(ShipmentItemService shipmentItemService) {
