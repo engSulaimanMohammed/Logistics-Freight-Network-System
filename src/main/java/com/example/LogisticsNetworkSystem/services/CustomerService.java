@@ -37,7 +37,8 @@ public class CustomerService {
         if (email.length() > 255) {
             throw new IllegalArgumentException("Email cannot exceed 255 characters");
         }
-        if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+        if (!email.matches(
+                "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
             throw new IllegalArgumentException("Email must be valid");
         }
         if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
