@@ -6,9 +6,9 @@ import lombok.Getter;
 import lombok.Setter;
 import java.util.Date;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class DeliveryStop extends BaseClass {
     private Integer sequence;
     private String address;
