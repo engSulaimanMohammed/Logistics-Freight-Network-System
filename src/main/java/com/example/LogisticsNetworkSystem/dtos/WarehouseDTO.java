@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries warehouse identity, location, and capacity data. */
 @Data
 @NoArgsConstructor
 public class WarehouseDTO {
