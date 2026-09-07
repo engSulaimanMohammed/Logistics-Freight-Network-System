@@ -26,7 +26,7 @@ public class Route extends BaseClass {
     @ManyToOne
     private Driver driver;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "route")
+    @JsonIgnore
     private List<DeliveryStop> deliveryStops = new ArrayList<>();
 }
