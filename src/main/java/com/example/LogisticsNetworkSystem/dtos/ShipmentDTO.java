@@ -76,6 +76,7 @@ public class ShipmentDTO {
         this.shipmentItems = shipmentItems;
     }
 
+    /** Converts a Shipment entity into its API transfer representation. */
     public static ShipmentDTO convertToDTO(Shipment entity) {
         if (entity == null) {
             return null;
@@ -92,6 +93,7 @@ public class ShipmentDTO {
                 .build();
     }
 
+    /** Converts a collection of Shipment entities into response DTOs. */
     public static List<ShipmentDTO> convertToDTO(List<Shipment> entities) {
         return entities.stream()
                 .map(ShipmentDTO::convertToDTO)
