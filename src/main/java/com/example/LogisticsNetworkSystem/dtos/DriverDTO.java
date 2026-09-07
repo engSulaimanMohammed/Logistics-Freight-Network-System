@@ -47,6 +47,7 @@ public class DriverDTO {
     /** Identifier of the carrier employing or managing the driver. */
     private Long carrierId;
 
+    /** Builds a DriverDTO from values transferred through the API. */
     @Builder
     public DriverDTO(
             Long id,
@@ -63,6 +64,7 @@ public class DriverDTO {
         this.carrierId = carrierId;
     }
 
+    /** Converts a Driver entity into its API transfer representation. */
     public static DriverDTO convertToDTO(Driver entity) {
         if (entity == null) {
             return null;
@@ -75,6 +77,7 @@ public class DriverDTO {
                 .build();
     }
 
+    /** Converts a collection of Driver entities into response DTOs. */
     public static List<DriverDTO> convertToDTO(List<Driver> entities) {
         return entities.stream()
                 .map(DriverDTO::convertToDTO)
