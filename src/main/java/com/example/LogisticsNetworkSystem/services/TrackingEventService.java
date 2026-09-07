@@ -14,7 +14,9 @@ public class TrackingEventService {
     private final TrackingEventRepository trackingEventRepository;
     private final ShipmentService shipmentService;
 
-    public TrackingEventService(TrackingEventRepository trackingEventRepository, ShipmentService shipmentService) {
+    public TrackingEventService(
+            TrackingEventRepository trackingEventRepository,
+            ShipmentService shipmentService) {
         this.trackingEventRepository = trackingEventRepository;
         this.shipmentService = shipmentService;
     }
