@@ -30,6 +30,7 @@ public class DriverController {
         return DriverDTO.convertToDTO(driverService.addDriver(driver, dto.getCarrierId()));
     }
 
+    /** Returns all drivers as response DTOs. */
     @GetMapping("/getAll")
     public List<DriverDTO> getAll() {
         return DriverDTO.convertToDTO(driverService.getAllDrivers());
