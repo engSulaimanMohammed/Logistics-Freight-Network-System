@@ -82,8 +82,13 @@ public class InvoiceService {
         return invoice;
     }
 
-    public Invoice updateInvoice(Long id, Double amount, String status, Date issuedDate,
-                                 Long shipmentId, Long customerId) {
+    public Invoice updateInvoice(
+            Long id,
+            Double amount,
+            String status,
+            Date issuedDate,
+            Long shipmentId,
+            Long customerId) {
         validateData(amount, status, issuedDate);
         Invoice invoice = getById(id);
         invoice.setAmount(amount);
