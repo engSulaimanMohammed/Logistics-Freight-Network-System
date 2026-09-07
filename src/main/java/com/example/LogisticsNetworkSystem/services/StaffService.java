@@ -97,6 +97,7 @@ public class StaffService {
     public boolean deleteById(Long id) {
         Staff staff = getById(id);
         staff.setActive(false);
+
         staff.setUpdatedDate(new Date());
         staffRepository.save(staff);
         return true;
