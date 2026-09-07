@@ -70,7 +70,8 @@ public class DriverService {
     }
 
     public Driver getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Driver ID must be greater than zero");
         }
         Driver driver = driverRepository.findById(id)
