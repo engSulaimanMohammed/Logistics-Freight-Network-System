@@ -41,8 +41,8 @@ public class ServiceZoneController {
         return ServiceZoneDTO.convertToDTO(serviceZoneService.getById(id));
     }
 
+    /** Updates the service zone identified by {@code id} using the validated DTO. */
     @PutMapping("/update/{id}")
-    // Updates the service zone identified by the path variable.
     public ServiceZoneDTO update(@PathVariable Long id, @Valid @RequestBody ServiceZoneDTO dto) {
         return ServiceZoneDTO.convertToDTO(serviceZoneService.updateServiceZone(id, dto.getName(), dto.getRegion(), dto.getBaseRate()));
     }
