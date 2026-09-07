@@ -79,7 +79,11 @@ public class WarehouseService {
         return warehouse;
     }
 
-    public Warehouse updateWarehouse(Long id, String name, String location, Integer capacity) {
+    public Warehouse updateWarehouse(
+            Long id,
+            String name,
+            String location,
+            Integer capacity) {
         validateWarehouseData(name, location, capacity);
         Warehouse warehouse = getById(id);
         warehouse.setName(name);
