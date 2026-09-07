@@ -42,6 +42,7 @@ public class CarrierDTO {
     /** Country in which the carrier operates. */
     private String country;
 
+    /** Builds a CarrierDTO from values transferred through the API. */
     @Builder
     public CarrierDTO(
             Long id,
@@ -56,6 +57,7 @@ public class CarrierDTO {
         this.country = country;
     }
 
+    /** Converts a Carrier entity into its API transfer representation. */
     public static CarrierDTO convertToDTO(Carrier entity) {
         if (entity == null) {
             return null;
@@ -67,6 +69,7 @@ public class CarrierDTO {
                 .build();
     }
 
+    /** Converts a collection of Carrier entities into response DTOs. */
     public static List<CarrierDTO> convertToDTO(List<Carrier> entities) {
         return entities.stream()
                 .map(CarrierDTO::convertToDTO)
