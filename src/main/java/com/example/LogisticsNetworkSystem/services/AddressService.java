@@ -105,6 +105,7 @@ public class AddressService {
     public boolean deleteById(Long id) {
         Address address = getById(id);
         address.setActive(false);
+
         address.setUpdatedDate(new Date());
         addressRepository.save(address);
         return true;
