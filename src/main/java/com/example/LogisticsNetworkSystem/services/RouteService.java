@@ -18,8 +18,11 @@ public class RouteService {
     private final DriverService driverService;
     private final ShipmentService shipmentService;
 
-    public RouteService(RouteRepository routeRepository, VehicleService vehicleService,
-                        DriverService driverService, ShipmentService shipmentService) {
+    public RouteService(
+            RouteRepository routeRepository,
+            VehicleService vehicleService,
+            DriverService driverService,
+            ShipmentService shipmentService) {
         this.routeRepository = routeRepository;
         this.vehicleService = vehicleService;
         this.driverService = driverService;
