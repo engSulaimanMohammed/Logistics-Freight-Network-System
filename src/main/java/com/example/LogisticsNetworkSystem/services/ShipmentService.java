@@ -165,7 +165,8 @@ public class ShipmentService {
         shipment.setTotalWeight(totalWeight);
         shipment.setWarehouse(warehouseService.getById(warehouseId));
         shipment.setCustomer(customerService.getById(customerId));
-        shipment.setCarrier(carrierId == null ? null : carrierService.getById(carrierId));
+        shipment.setCarrier(
+                carrierId == null ? null : carrierService.getById(carrierId));
         shipment.setUpdatedDate(new Date());
         return shipmentRepository.save(shipment);
     }
