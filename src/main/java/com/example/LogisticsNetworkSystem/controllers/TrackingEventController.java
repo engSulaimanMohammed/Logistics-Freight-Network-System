@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/** Exposes REST operations for shipment tracking event management. */
 @RestController
 @RequestMapping("/trackingEvent")
 public class TrackingEventController {
