@@ -32,6 +32,7 @@ public class DeliveryStopController {
                 stop, dto.getRouteId(), dto.getShipmentId()));
     }
 
+    /** Adds the request DTO as a delivery stop on its specified route. */
     @PostMapping("/addToRoute")
     public DeliveryStopDTO addToRoute(@Valid @RequestBody DeliveryStopDTO dto) {
         return add(dto);
