@@ -36,6 +36,7 @@ public class WarehouseController {
         return WarehouseDTO.convertToDTO(warehouseService.getAllWarehouses());
     }
 
+    /** Retrieves the warehouse identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public WarehouseDTO getById(@PathVariable Long id) {
         return WarehouseDTO.convertToDTO(warehouseService.getById(id));
