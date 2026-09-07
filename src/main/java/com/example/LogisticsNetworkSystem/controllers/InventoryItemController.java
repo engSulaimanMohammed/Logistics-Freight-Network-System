@@ -34,6 +34,7 @@ public class InventoryItemController {
         return InventoryItemDTO.convertToDTO(inventoryItemService.getAllInventoryItems());
     }
 
+    /** Retrieves the inventory item identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public InventoryItemDTO getById(@PathVariable Long id) {
         return InventoryItemDTO.convertToDTO(inventoryItemService.getById(id));
