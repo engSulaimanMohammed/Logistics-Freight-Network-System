@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries the identifiers required to assign a carrier to a shipment. */
 @Data
 @NoArgsConstructor
 public class ShipmentCarrierAssignmentDTO {
