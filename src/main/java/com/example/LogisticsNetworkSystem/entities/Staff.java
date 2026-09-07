@@ -12,6 +12,7 @@ import lombok.Setter;
 public class Staff extends BaseClass {
     private String name;
     private String role;
+
     private String phoneNumber;
 
     @ManyToOne
