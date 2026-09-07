@@ -29,6 +29,7 @@ public class TrackingEventController {
         return event;
     }
 
+    /** Creates a tracking event and associates it with the requested shipment. */
     @PostMapping("/add")
     public TrackingEventDTO add(@Valid @RequestBody TrackingEventDTO dto) {
         return TrackingEventDTO.convertToDTO(
