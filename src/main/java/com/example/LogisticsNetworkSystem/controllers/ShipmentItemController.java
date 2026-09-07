@@ -45,6 +45,7 @@ public class ShipmentItemController {
         return ShipmentItemDTO.convertToDTO(shipmentItemService.updateShipmentItem(id, dto.getQuantity(), dto.getShipmentId(), dto.getProductId()));
     }
 
+    /** Deletes the selected shipment item and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public ShipmentItemDTO delete(@PathVariable Long id) {
         ShipmentItemDTO dto = ShipmentItemDTO.convertToDTO(shipmentItemService.getById(id));
