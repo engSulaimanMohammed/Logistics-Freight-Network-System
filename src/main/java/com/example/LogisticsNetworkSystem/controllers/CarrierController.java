@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/carrier")
 public class CarrierController {
 
+    /** Coordinates carrier persistence and business queries through the service layer. */
     private final CarrierService carrierService;
 
     public CarrierController(CarrierService carrierService) {
