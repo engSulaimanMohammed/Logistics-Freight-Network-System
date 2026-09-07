@@ -59,7 +59,9 @@ public class ProductService {
     }
 
     public List<Product> getAllProducts() {
-        return productRepository.findAll().stream().filter(Product::isActive).toList();
+        return productRepository.findAll().stream()
+                .filter(Product::isActive)
+                .toList();
     }
 
     public Product getById(Long id) {
