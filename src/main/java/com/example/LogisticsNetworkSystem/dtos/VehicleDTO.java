@@ -16,26 +16,32 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class VehicleDTO {
 
+    /** Unique identifier of the vehicle. */
     private Long id;
 
     @NotBlank(message = "plateNumber cannot be blank")
     @Size(max = 255, message = "plateNumber cannot exceed 255 characters")
+    /** License plate number of the vehicle. */
     private String plateNumber;
 
     @NotBlank(message = "type cannot be blank")
     @Size(max = 255, message = "type cannot exceed 255 characters")
+    /** Vehicle type recorded for logistics operations. */
     private String type;
 
     @NotNull(message = "capacityKg cannot be null")
     @Positive(message = "capacityKg must be greater than zero")
+    /** Vehicle carrying capacity expressed in kilograms. */
     private Double capacityKg;
 
     @NotBlank(message = "status cannot be blank")
     @Size(max = 255, message = "status cannot exceed 255 characters")
+    /** Current operational status of the vehicle. */
     private String status;
 
     @NotNull(message = "carrierId cannot be null")
     @Positive(message = "carrierId must be greater than zero")
+    /** Identifier of the carrier responsible for the vehicle. */
     private Long carrierId;
 
     @Builder
