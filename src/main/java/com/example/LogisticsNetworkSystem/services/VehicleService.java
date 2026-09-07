@@ -79,7 +79,13 @@ public class VehicleService {
         return vehicle;
     }
 
-    public Vehicle updateVehicle(Long id, String plateNumber, String type, Double capacityKg, String status, Long carrierId) {
+    public Vehicle updateVehicle(
+            Long id,
+            String plateNumber,
+            String type,
+            Double capacityKg,
+            String status,
+            Long carrierId) {
         validateVehicleData(plateNumber, type, capacityKg, status);
         Vehicle vehicle = getById(id);
         Carrier carrier = carrierService.getById(carrierId);
