@@ -54,7 +54,8 @@ public class AddressService {
         if (address == null) {
             throw new IllegalArgumentException("Address cannot be null");
         }
-        validateAddressData(address.getStreet(), address.getCity(), address.getPostalCode(), address.getCountry());
+        validateAddressData(
+                address.getStreet(), address.getCity(), address.getPostalCode(), address.getCountry());
         Customer customer = customerService.getById(customerId);
         address.setCustomer(customer);
         address.setActive(true);
