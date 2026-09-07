@@ -19,6 +19,7 @@ public class DriverController {
         this.driverService = driverService;
     }
 
+    /** Creates a driver from the validated DTO and associates it with a carrier. */
     @PostMapping("/add")
     public DriverDTO add(@Valid @RequestBody DriverDTO dto) {
         Driver driver = new Driver();
