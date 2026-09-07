@@ -67,7 +67,9 @@ public class CustomerService {
     }
 
     public List<Customer> getAllCustomers() {
-        return customerRepository.findAll().stream().filter(Customer::isActive).toList();
+        return customerRepository.findAll().stream()
+                .filter(Customer::isActive)
+                .toList();
     }
 
     public Customer getById(Long id) {
