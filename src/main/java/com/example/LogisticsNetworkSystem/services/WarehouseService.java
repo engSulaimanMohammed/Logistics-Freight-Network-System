@@ -67,7 +67,8 @@ public class WarehouseService {
     }
 
     public Warehouse getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Warehouse ID must be greater than zero");
         }
         Warehouse warehouse = warehouseRepository.findById(id)
