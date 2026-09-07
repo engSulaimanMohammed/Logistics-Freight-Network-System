@@ -48,11 +48,13 @@ public class VehicleController {
         return VehicleDTO.convertToDTO(vehicleService.updateVehicle(id, dto.getPlateNumber(), dto.getType(), dto.getCapacityKg(), dto.getStatus(), dto.getCarrierId()));
     }
 
+/** Returns vehicles currently available according to the service layer. */
 @GetMapping("/available")
 public List<VehicleDTO> getAvailable() {
     return VehicleDTO.convertToDTO(vehicleService.getAvailableVehicles());
 }
 
+    /** Deletes the selected vehicle and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public VehicleDTO delete(@PathVariable Long id) {
         VehicleDTO dto = VehicleDTO.convertToDTO(vehicleService.getById(id));
