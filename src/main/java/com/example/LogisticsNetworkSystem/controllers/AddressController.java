@@ -19,8 +19,8 @@ public class AddressController {
         this.addressService = addressService;
     }
 
+    /** Creates an address from the validated DTO and associates it with a customer. */
     @PostMapping("/add")
-    // Creates an address from the request DTO and associates it with a customer.
     public AddressDTO add(@Valid @RequestBody AddressDTO dto) {
         Address address = new Address();
         address.setStreet(dto.getStreet());
