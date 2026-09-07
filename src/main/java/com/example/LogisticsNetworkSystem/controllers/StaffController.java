@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/staff")
 public class StaffController {
 
+    /** Coordinates staff persistence and warehouse association through the service layer. */
     private final StaffService staffService;
 
     public StaffController(StaffService staffService) {
