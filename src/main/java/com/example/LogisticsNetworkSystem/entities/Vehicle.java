@@ -22,7 +22,7 @@ public class Vehicle extends BaseClass {
     @ManyToOne
     private Carrier carrier;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "vehicle")
+    @JsonIgnore
     private List<Route> routes = new ArrayList<>();
 }
