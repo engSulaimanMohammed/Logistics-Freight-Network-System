@@ -89,7 +89,8 @@ public class DriverService {
             String phoneNumber,
             String status,
             Long carrierId) {
-        validateDriverData(name, licenseNumber, phoneNumber, status);
+        validateDriverData(
+                name, licenseNumber, phoneNumber, status);
         Driver driver = getById(id);
         Carrier carrier = carrierService.getById(carrierId);
         driver.setName(name);
