@@ -17,22 +17,27 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class InventoryItemDTO {
 
+    /** Unique identifier of the inventory item. */
     private Long id;
 
     @NotNull(message = "quantity cannot be null")
     @PositiveOrZero(message = "quantity cannot be negative")
+    /** Current quantity held in inventory. */
     private Integer quantity;
 
     @NotBlank(message = "shelfLocation cannot be blank")
     @Size(max = 255, message = "shelfLocation cannot exceed 255 characters")
+    /** Shelf or storage location assigned to the inventory item. */
     private String shelfLocation;
 
     @NotNull(message = "warehouseId cannot be null")
     @Positive(message = "warehouseId must be greater than zero")
+    /** Identifier of the warehouse holding the item. */
     private Long warehouseId;
 
     @NotNull(message = "productId cannot be null")
     @Positive(message = "productId must be greater than zero")
+    /** Identifier of the product represented by the item. */
     private Long productId;
 
     @Builder
