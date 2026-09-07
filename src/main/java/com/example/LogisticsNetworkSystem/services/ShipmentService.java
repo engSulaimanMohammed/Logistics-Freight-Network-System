@@ -52,7 +52,8 @@ public class ShipmentService {
         if (shipmentDate.after(new Date())) {
             throw new IllegalArgumentException("Shipment date cannot be in the future");
         }
-        if (status == null || status.trim().isEmpty()) {
+        if (status == null
+                || status.trim().isEmpty()) {
             throw new IllegalArgumentException("Shipment status cannot be blank");
         }
         if (status.length() > 255) {
