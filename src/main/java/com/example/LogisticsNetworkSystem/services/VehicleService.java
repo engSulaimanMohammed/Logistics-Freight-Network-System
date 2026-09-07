@@ -51,7 +51,8 @@ public class VehicleService {
         if (vehicle == null) {
             throw new IllegalArgumentException("Vehicle cannot be null");
         }
-        validateVehicleData(vehicle.getPlateNumber(), vehicle.getType(), vehicle.getCapacityKg(), vehicle.getStatus());
+        validateVehicleData(
+                vehicle.getPlateNumber(), vehicle.getType(), vehicle.getCapacityKg(), vehicle.getStatus());
         Carrier carrier = carrierService.getById(carrierId);
         vehicle.setCarrier(carrier);
         vehicle.setActive(true);
