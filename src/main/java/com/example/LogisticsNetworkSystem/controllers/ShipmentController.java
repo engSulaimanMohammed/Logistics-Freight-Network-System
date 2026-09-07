@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/** Exposes REST operations for shipment management and shipment workflows. */
 @RestController
 @RequestMapping("/shipment")
 public class ShipmentController {
