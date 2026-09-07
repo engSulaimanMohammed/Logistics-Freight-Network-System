@@ -12,6 +12,7 @@ import lombok.Setter;
 @Entity
 public class TrackingEvent extends BaseClass {
     private Date eventTime;
+
     private String location;
     private String status;
     private String note;
