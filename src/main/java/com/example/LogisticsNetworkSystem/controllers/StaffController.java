@@ -47,6 +47,7 @@ public class StaffController {
         return StaffDTO.convertToDTO(staffService.updateStaff(id, dto.getName(), dto.getRole(), dto.getPhoneNumber(), dto.getWarehouseId()));
     }
 
+    /** Deletes the selected staff record and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public StaffDTO delete(@PathVariable Long id) {
         StaffDTO dto = StaffDTO.convertToDTO(staffService.getById(id));
