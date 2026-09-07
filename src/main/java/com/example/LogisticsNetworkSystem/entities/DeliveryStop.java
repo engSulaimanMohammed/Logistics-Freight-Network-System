@@ -11,6 +11,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class DeliveryStop extends BaseClass {
+
     private Integer sequence;
     private String address;
     private String status;
