@@ -38,7 +38,9 @@ public class InvoiceService {
     }
 
     public Invoice addInvoice(Invoice invoice, Long shipmentId, Long customerId) {
-        if (invoice == null) throw new IllegalArgumentException("Invoice cannot be null");
+        if (invoice == null) {
+            throw new IllegalArgumentException("Invoice cannot be null");
+        }
         validateData(invoice.getAmount(), invoice.getStatus(), invoice.getIssuedDate());
         invoice.setShipment(shipmentService.getById(shipmentId));
         invoice.setCustomer(customerService.getById(customerId));
