@@ -29,8 +29,8 @@ public class ServiceZoneController {
         return ServiceZoneDTO.convertToDTO(serviceZoneService.addServiceZone(serviceZone));
     }
 
+    /** Returns all service zones as response DTOs. */
     @GetMapping("/getAll")
-    // Retrieves all service zones as response DTOs.
     public List<ServiceZoneDTO> getAll() {
         return ServiceZoneDTO.convertToDTO(serviceZoneService.getAllServiceZones());
     }
