@@ -44,7 +44,9 @@ public class TrackingEventService {
     }
 
     public TrackingEvent addTrackingEvent(TrackingEvent event, Long shipmentId) {
-        if (event == null) throw new IllegalArgumentException("TrackingEvent cannot be null");
+        if (event == null) {
+            throw new IllegalArgumentException("TrackingEvent cannot be null");
+        }
         validateData(event.getEventTime(), event.getLocation(), event.getStatus(), event.getNote());
         event.setShipment(shipmentService.getById(shipmentId));
         event.setActive(true);
