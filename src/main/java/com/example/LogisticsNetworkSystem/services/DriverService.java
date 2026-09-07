@@ -54,7 +54,8 @@ public class DriverService {
         if (driver == null) {
             throw new IllegalArgumentException("Driver cannot be null");
         }
-        validateDriverData(driver.getName(), driver.getLicenseNumber(), driver.getPhoneNumber(), driver.getStatus());
+        validateDriverData(
+                driver.getName(), driver.getLicenseNumber(), driver.getPhoneNumber(), driver.getStatus());
         Carrier carrier = carrierService.getById(carrierId);
         driver.setCarrier(carrier);
         driver.setActive(true);
