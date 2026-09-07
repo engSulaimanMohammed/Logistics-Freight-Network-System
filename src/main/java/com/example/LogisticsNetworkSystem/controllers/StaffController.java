@@ -19,6 +19,7 @@ public class StaffController {
         this.staffService = staffService;
     }
 
+    /** Creates staff from the validated DTO and associates it with a warehouse. */
     @PostMapping("/add")
     public StaffDTO add(@Valid @RequestBody StaffDTO dto) {
         Staff staff = new Staff();
