@@ -104,6 +104,7 @@ public class TrackingEventService {
     public boolean deleteById(Long id) {
         TrackingEvent event = getById(id);
         event.setActive(false);
+
         event.setUpdatedDate(new Date());
         trackingEventRepository.save(event);
         return true;
