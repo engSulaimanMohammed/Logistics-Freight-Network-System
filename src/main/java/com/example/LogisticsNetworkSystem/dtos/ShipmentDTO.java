@@ -20,31 +20,39 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ShipmentDTO {
 
+    /** Unique identifier of the shipment. */
     private Long id;
 
     @NotNull(message = "shipmentDate cannot be null")
     @PastOrPresent(message = "shipmentDate cannot be in the future")
+    /** Date on which the shipment is scheduled or recorded. */
     private Date shipmentDate;
 
     @NotBlank(message = "status cannot be blank")
     @Size(max = 255, message = "status cannot exceed 255 characters")
+    /** Current lifecycle status of the shipment. */
     private String status;
 
     @PositiveOrZero(message = "totalWeight cannot be negative")
+    /** Total shipment weight represented in the transfer model. */
     private Double totalWeight;
 
     @NotNull(message = "warehouseId cannot be null")
     @Positive(message = "warehouseId must be greater than zero")
+    /** Identifier of the warehouse handling the shipment. */
     private Long warehouseId;
 
     @NotNull(message = "customerId cannot be null")
     @Positive(message = "customerId must be greater than zero")
+    /** Identifier of the customer receiving the shipment. */
     private Long customerId;
 
     @Positive(message = "carrierId must be greater than zero")
+    /** Optional identifier of the carrier assigned to the shipment. */
     private Long carrierId;
 
     @Valid
+    /** Nested item data included with the shipment transfer. */
     private List<ShipmentItemDTO> shipmentItems;
 
     @Builder
