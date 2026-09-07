@@ -8,9 +8,9 @@ import lombok.Setter;
 
 import java.util.Date;
 
-@MappedSuperclass
 @Getter
 @Setter
+@MappedSuperclass
 public class BaseClass {
     @Id
     @GeneratedValue
