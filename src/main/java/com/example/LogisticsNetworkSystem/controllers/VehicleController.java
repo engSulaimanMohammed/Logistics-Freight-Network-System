@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/vehicle")
 public class VehicleController {
 
+    /** Coordinates vehicle persistence and carrier association through the service layer. */
     private final VehicleService vehicleService;
 
     public VehicleController(VehicleService vehicleService) {
