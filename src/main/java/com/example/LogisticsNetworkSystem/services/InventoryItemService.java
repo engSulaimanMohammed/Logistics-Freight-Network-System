@@ -16,7 +16,10 @@ public class InventoryItemService {
     private final WarehouseService warehouseService;
     private final ProductService productService;
 
-    public InventoryItemService(InventoryItemRepository inventoryItemRepository, WarehouseService warehouseService, ProductService productService) {
+    public InventoryItemService(
+            InventoryItemRepository inventoryItemRepository,
+            WarehouseService warehouseService,
+            ProductService productService) {
         this.inventoryItemRepository = inventoryItemRepository;
         this.warehouseService = warehouseService;
         this.productService = productService;
