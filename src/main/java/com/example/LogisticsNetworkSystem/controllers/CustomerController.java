@@ -49,11 +49,13 @@ public class CustomerController {
         return CustomerDTO.convertToDTO(customerService.updateCustomer(id, dto.getName(), dto.getEmail(), dto.getPhoneNumber(), dto.getType()));
     }
 
+/** Returns statistics for the customer identified by {@code id}. */
 @GetMapping("/stats/{id}")
 public CustomerStatsDTO getStats(@PathVariable Long id) {
     return customerService.getStats(id);
 }
 
+    /** Deletes the selected customer and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public CustomerDTO delete(@PathVariable Long id) {
         CustomerDTO dto = CustomerDTO.convertToDTO(customerService.getById(id));
