@@ -42,6 +42,7 @@ public class CustomerDTO {
     /** Customer classification supplied by the API. */
     private String type;
 
+    /** Builds a CustomerDTO from values transferred through the API. */
     @Builder
     public CustomerDTO(
             Long id,
@@ -56,6 +57,7 @@ public class CustomerDTO {
         this.type = type;
     }
 
+    /** Converts a Customer entity into its API transfer representation. */
     public static CustomerDTO convertToDTO(Customer entity) {
         if (entity == null) {
             return null;
@@ -67,6 +69,7 @@ public class CustomerDTO {
                 .build();
     }
 
+    /** Converts a collection of Customer entities into response DTOs. */
     public static List<CustomerDTO> convertToDTO(List<Customer> entities) {
         return entities.stream()
                 .map(CustomerDTO::convertToDTO)
