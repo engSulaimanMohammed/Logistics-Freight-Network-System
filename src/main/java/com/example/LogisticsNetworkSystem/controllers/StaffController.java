@@ -29,6 +29,7 @@ public class StaffController {
         return StaffDTO.convertToDTO(staffService.addStaff(staff, dto.getWarehouseId()));
     }
 
+    /** Returns all staff records as response DTOs. */
     @GetMapping("/getAll")
     public List<StaffDTO> getAll() {
         return StaffDTO.convertToDTO(staffService.getAllStaffs());
