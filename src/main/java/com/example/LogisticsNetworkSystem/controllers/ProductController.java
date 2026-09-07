@@ -48,6 +48,7 @@ public class ProductController {
         return ProductDTO.convertToDTO(productService.updateProduct(id, dto.getName(), dto.getSku(), dto.getWeightKg(), dto.getCategory()));
     }
 
+    /** Deletes the selected product and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public ProductDTO delete(@PathVariable Long id) {
         ProductDTO dto = ProductDTO.convertToDTO(productService.getById(id));
