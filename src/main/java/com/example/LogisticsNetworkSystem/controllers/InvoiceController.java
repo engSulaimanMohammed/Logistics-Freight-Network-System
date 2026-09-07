@@ -19,6 +19,7 @@ public class InvoiceController {
         this.invoiceService = invoiceService;
     }
 
+    /** Maps invoice fields from the request DTO into a service-layer entity. */
     private Invoice fromDTO(InvoiceDTO dto) {
         Invoice invoice = new Invoice();
         invoice.setAmount(dto.getAmount());
