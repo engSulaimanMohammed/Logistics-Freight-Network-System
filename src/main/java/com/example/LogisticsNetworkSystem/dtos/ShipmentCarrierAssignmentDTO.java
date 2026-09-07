@@ -21,6 +21,7 @@ public class ShipmentCarrierAssignmentDTO {
     private Long carrierId;
 
     @Builder
+    /** Builds a carrier assignment request from shipment and carrier identifiers. */
     public ShipmentCarrierAssignmentDTO(Long shipmentId, Long carrierId) {
         this.shipmentId = shipmentId;
         this.carrierId = carrierId;
