@@ -22,7 +22,8 @@ public class AddressService {
     }
 
     private void validateAddressData(String street, String city, String postalCode, String country) {
-        if (street == null || street.trim().isEmpty()) {
+        if (street == null
+                || street.trim().isEmpty()) {
             throw new IllegalArgumentException("Street cannot be blank");
         }
         if (street.length() > 255) {
