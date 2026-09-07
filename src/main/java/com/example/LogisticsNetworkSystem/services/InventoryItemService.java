@@ -26,7 +26,8 @@ public class InventoryItemService {
     }
 
     private void validateInventoryItemData(Integer quantity, String shelfLocation) {
-        if (quantity == null || quantity < 0) {
+        if (quantity == null
+                || quantity < 0) {
             throw new IllegalArgumentException("Quantity cannot be negative");
         }
         if (shelfLocation == null || shelfLocation.trim().isEmpty()) {
