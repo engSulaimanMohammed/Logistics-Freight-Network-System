@@ -41,11 +41,13 @@ public class ShipmentController {
                 shipment, dto.getWarehouseId(), dto.getCustomerId(), dto.getShipmentItems()));
     }
 
+    /** Returns all shipments as response DTOs. */
     @GetMapping("/getAll")
     public List<ShipmentDTO> getAll() {
         return ShipmentDTO.convertToDTO(shipmentService.getAllShipments());
     }
 
+    /** Retrieves the shipment identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public ShipmentDTO getById(@PathVariable Long id) {
         return ShipmentDTO.convertToDTO(shipmentService.getById(id));
