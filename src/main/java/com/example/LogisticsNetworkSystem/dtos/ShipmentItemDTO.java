@@ -14,17 +14,21 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ShipmentItemDTO {
 
+    /** Unique identifier of the shipment item. */
     private Long id;
 
     @NotNull(message = "quantity cannot be null")
     @Positive(message = "quantity must be greater than zero")
+    /** Quantity of the product included in the shipment. */
     private Integer quantity;
 
     @Positive(message = "shipmentId must be greater than zero")
+    /** Identifier of the shipment containing the item. */
     private Long shipmentId;
 
     @NotNull(message = "productId cannot be null")
     @Positive(message = "productId must be greater than zero")
+    /** Identifier of the product represented by the item. */
     private Long productId;
 
     @Builder
