@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
+/** Exposes REST operations for warehouse inventory item management. */
 @RestController
 @RequestMapping("/inventoryItem")
 public class InventoryItemController {
