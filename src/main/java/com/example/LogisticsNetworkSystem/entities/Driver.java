@@ -22,7 +22,7 @@ public class Driver extends BaseClass {
     @ManyToOne
     private Carrier carrier;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "driver")
+    @JsonIgnore
     private List<Route> routes = new ArrayList<>();
 }
