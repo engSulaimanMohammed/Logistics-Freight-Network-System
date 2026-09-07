@@ -122,6 +122,7 @@ public class CarrierService {
     public boolean deleteById(Long id) {
         Carrier carrier = getById(id);
         carrier.setActive(false);
+
         carrier.setUpdatedDate(new Date());
         carrierRepository.save(carrier);
         return true;
