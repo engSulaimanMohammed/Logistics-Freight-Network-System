@@ -5,11 +5,11 @@ import com.example.LogisticsNetworkSystem.entities.Route;
 import com.example.LogisticsNetworkSystem.entities.Shipment;
 import com.example.LogisticsNetworkSystem.entities.Vehicle;
 import com.example.LogisticsNetworkSystem.exceptions.ResourceNotFoundException;
-import com.example.LogisticsNetworkSystem.repositories.RouteRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.Date;
 import java.util.List;
+
+import com.example.LogisticsNetworkSystem.repositories.RouteRepository;
+import org.springframework.stereotype.Service;
 
 @Service
 public class RouteService {
