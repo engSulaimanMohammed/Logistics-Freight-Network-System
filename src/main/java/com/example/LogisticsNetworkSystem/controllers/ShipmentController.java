@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/shipment")
 public class ShipmentController {
+    /** Coordinates shipment persistence and business actions through the service layer. */
     private final ShipmentService shipmentService;
 
     public ShipmentController(ShipmentService shipmentService) {
