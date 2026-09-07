@@ -9,9 +9,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InvoiceRepository extends JpaRepository<Invoice, Long> {
-    @Query("SELECT i FROM Invoice i WHERE i.customer.id = :customerId AND LOWER(i.status) = 'unpaid' AND i.isActive = true")
+    @Query(value = "SELECT i FROM Invoice i WHERE i.customer.id = :customerId AND LOWER(i.status) = 'unpaid' AND i.isActive = true")
     List<Invoice> findUnpaidInvoicesByCustomer(@Param("customerId") Long customerId);
 
-    @Query("SELECT COALESCE(SUM(i.amount), 0) FROM Invoice i WHERE i.customer.id = :customerId AND i.isActive = true")
+    @Query(value = "SELECT COALESCE(SUM(i.amount), 0) FROM Invoice i WHERE i.customer.id = :customerId AND i.isActive = true")
     Double totalInvoicedAmountByCustomer(@Param("customerId") Long customerId);
 }
