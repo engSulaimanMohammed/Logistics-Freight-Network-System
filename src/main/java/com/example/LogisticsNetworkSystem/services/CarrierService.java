@@ -109,8 +109,8 @@ public class CarrierService {
         return carrierRepository.save(carrier);
     }
 
-public CarrierStatsDTO getStats(Long carrierId) {
-    getById(carrierId);
+    public CarrierStatsDTO getStats(Long carrierId) {
+        getById(carrierId);
     return CarrierStatsDTO.builder()
             .carrierId(carrierId)
             .vehicles(vehicleRepository.countByCarrier_IdAndIsActiveTrue(carrierId))
