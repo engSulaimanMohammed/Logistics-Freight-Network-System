@@ -81,7 +81,8 @@ public class CarrierService {
     }
 
     public Carrier getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Carrier ID must be greater than zero");
         }
         Carrier carrier = carrierRepository.findById(id)
