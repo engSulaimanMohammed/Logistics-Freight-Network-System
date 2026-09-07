@@ -4,7 +4,6 @@ import com.example.LogisticsNetworkSystem.entities.Address;
 import com.example.LogisticsNetworkSystem.entities.Customer;
 import com.example.LogisticsNetworkSystem.exceptions.ResourceNotFoundException;
 import com.example.LogisticsNetworkSystem.repositories.AddressRepository;
-import com.example.LogisticsNetworkSystem.services.CustomerService;
 import java.util.Date;
 import java.util.List;
 import org.springframework.stereotype.Service;
