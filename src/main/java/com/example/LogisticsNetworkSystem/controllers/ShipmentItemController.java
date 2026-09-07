@@ -33,6 +33,7 @@ public class ShipmentItemController {
         return ShipmentItemDTO.convertToDTO(shipmentItemService.getAllShipmentItems());
     }
 
+    /** Retrieves the shipment item identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public ShipmentItemDTO getById(@PathVariable Long id) {
         return ShipmentItemDTO.convertToDTO(shipmentItemService.getById(id));
