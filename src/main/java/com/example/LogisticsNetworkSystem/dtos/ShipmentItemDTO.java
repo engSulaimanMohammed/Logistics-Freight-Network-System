@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries product quantity data associated with a shipment. */
 @Data
 @NoArgsConstructor
 public class ShipmentItemDTO {
