@@ -9,12 +9,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ShipmentRepository extends JpaRepository<Shipment, Long> {
-    @Query("SELECT s FROM Shipment s WHERE LOWER(s.status) = LOWER(:status) AND s.isActive = true")
+    @Query(value = "SELECT s FROM Shipment s WHERE LOWER(s.status) = LOWER(:status) AND s.isActive = true")
     List<Shipment> findByStatus(@Param("status") String status);
 
-    @Query("SELECT s FROM Shipment s WHERE s.customer.id = :customerId AND s.isActive = true")
+    @Query(value = "SELECT s FROM Shipment s WHERE s.customer.id = :customerId AND s.isActive = true")
     List<Shipment> findCustomerShipmentHistory(@Param("customerId") Long customerId);
 
-    @Query("SELECT COUNT(s) FROM Shipment s WHERE s.warehouse.id = :warehouseId AND s.isActive = true")
+    @Query(value = "SELECT COUNT(s) FROM Shipment s WHERE s.warehouse.id = :warehouseId AND s.isActive = true")
     long countActiveShipmentsByWarehouse(@Param("warehouseId") Long warehouseId);
 }
