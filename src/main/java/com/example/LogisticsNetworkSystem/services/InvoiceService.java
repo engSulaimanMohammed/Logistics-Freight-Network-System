@@ -108,6 +108,7 @@ public class InvoiceService {
     public boolean deleteById(Long id) {
         Invoice invoice = getById(id);
         invoice.setActive(false);
+
         invoice.setUpdatedDate(new Date());
         invoiceRepository.save(invoice);
         return true;
