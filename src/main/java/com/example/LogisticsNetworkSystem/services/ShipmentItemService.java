@@ -16,7 +16,10 @@ public class ShipmentItemService {
     private final ShipmentService shipmentService;
     private final ProductService productService;
 
-    public ShipmentItemService(ShipmentItemRepository shipmentItemRepository, ShipmentService shipmentService, ProductService productService) {
+    public ShipmentItemService(
+            ShipmentItemRepository shipmentItemRepository,
+            ShipmentService shipmentService,
+            ProductService productService) {
         this.shipmentItemRepository = shipmentItemRepository;
         this.shipmentService = shipmentService;
         this.productService = productService;
