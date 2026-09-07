@@ -42,6 +42,7 @@ public class DriverController {
         return DriverDTO.convertToDTO(driverService.getById(id));
     }
 
+    /** Updates the driver identified by {@code id} with the validated DTO fields. */
     @PutMapping("/update/{id}")
     public DriverDTO update(@PathVariable Long id, @Valid @RequestBody DriverDTO dto) {
         return DriverDTO.convertToDTO(driverService.updateDriver(id, dto.getName(), dto.getLicenseNumber(), dto.getPhoneNumber(), dto.getStatus(), dto.getCarrierId()));
