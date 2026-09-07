@@ -12,6 +12,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries route planning data and its assigned vehicle and driver relationships. */
 @Data
 @NoArgsConstructor
 public class RouteDTO {
