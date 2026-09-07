@@ -71,7 +71,9 @@ public class ShipmentService {
         validateShipmentData(shipment.getShipmentDate(), shipment.getStatus(), shipment.getTotalWeight());
         Warehouse warehouse = warehouseService.getById(warehouseId);
         Customer customer = customerService.getById(customerId);
-        Carrier carrier = carrierId == null ? null : carrierService.getById(carrierId);
+        Carrier carrier = carrierId == null
+                ? null
+                : carrierService.getById(carrierId);
         shipment.setWarehouse(warehouse);
         shipment.setCustomer(customer);
         shipment.setCarrier(carrier);
