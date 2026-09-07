@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/** Exposes REST operations for invoice creation, lookup, and payment status workflows. */
 @RestController
 @RequestMapping("/invoice")
 public class InvoiceController {
