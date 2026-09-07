@@ -50,6 +50,7 @@ public class DeliveryStopController {
         return DeliveryStopDTO.convertToDTO(deliveryStopService.getById(id));
     }
 
+    /** Updates the stop identified by {@code id} using the validated DTO. */
     @PutMapping("/update/{id}")
     public DeliveryStopDTO update(@PathVariable Long id, @Valid @RequestBody DeliveryStopDTO dto) {
         return DeliveryStopDTO.convertToDTO(deliveryStopService.updateDeliveryStop(
