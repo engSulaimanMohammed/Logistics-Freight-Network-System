@@ -18,11 +18,11 @@ public class Customer extends BaseClass {
     private String phoneNumber;
     private String type;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "customer")
+    @JsonIgnore
     private List<Shipment> shipments = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(mappedBy = "customer")
+    @JsonIgnore
     private List<Address> addresses = new ArrayList<>();
 }
