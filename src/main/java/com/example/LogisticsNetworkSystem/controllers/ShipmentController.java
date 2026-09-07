@@ -31,6 +31,7 @@ public class ShipmentController {
                 shipment, dto.getWarehouseId(), dto.getCustomerId(), dto.getCarrierId()));
     }
 
+    /** Creates a shipment with its requested shipment item collection. */
     @PostMapping("/create")
     public ShipmentDTO createShipment(@Valid @RequestBody ShipmentDTO dto) {
         Shipment shipment = new Shipment();
