@@ -73,7 +73,8 @@ public class CustomerService {
     }
 
     public Customer getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Customer ID must be greater than zero");
         }
         Customer customer = customerRepository.findById(id)
