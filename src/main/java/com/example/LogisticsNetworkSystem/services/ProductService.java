@@ -51,7 +51,8 @@ public class ProductService {
         if (product == null) {
             throw new IllegalArgumentException("Product cannot be null");
         }
-        validateProductData(product.getName(), product.getSku(), product.getWeightKg(), product.getCategory());
+        validateProductData(
+                product.getName(), product.getSku(), product.getWeightKg(), product.getCategory());
         product.setActive(true);
         product.setCreatedDate(new Date());
         return productRepository.save(product);
