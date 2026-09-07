@@ -37,7 +37,8 @@ public class TrackingEventService {
     }
 
     private void validateTrackingStatus(String status) {
-        if (!("Picked Up".equalsIgnoreCase(status) || "In Transit".equalsIgnoreCase(status)
+        if (!("Picked Up".equalsIgnoreCase(status)
+                || "In Transit".equalsIgnoreCase(status)
                 || "Delivered".equalsIgnoreCase(status))) {
             throw new IllegalArgumentException("Tracking status must be Picked Up, In Transit, or Delivered");
         }
