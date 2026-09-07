@@ -58,11 +58,13 @@ public class DeliveryStopController {
                 dto.getRouteId(), dto.getShipmentId()));
     }
 
+    /** Marks the delivery stop identified in the completion DTO as complete. */
     @PutMapping("/complete")
     public DeliveryStopDTO complete(@Valid @RequestBody DeliveryStopCompleteDTO dto) {
         return DeliveryStopDTO.convertToDTO(deliveryStopService.markComplete(dto.getDeliveryStopId()));
     }
 
+    /** Deletes the selected stop and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public DeliveryStopDTO delete(@PathVariable Long id) {
         DeliveryStopDTO dto = DeliveryStopDTO.convertToDTO(deliveryStopService.getById(id));
