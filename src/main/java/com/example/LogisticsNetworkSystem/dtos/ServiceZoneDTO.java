@@ -16,18 +16,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ServiceZoneDTO {
 
+    /** Unique identifier of the service zone. */
     private Long id;
 
     @NotBlank(message = "name cannot be blank")
     @Size(max = 255, message = "name cannot exceed 255 characters")
+    /** Name of the service zone. */
     private String name;
 
     @NotBlank(message = "region cannot be blank")
     @Size(max = 255, message = "region cannot exceed 255 characters")
+    /** Geographic region covered by the service zone. */
     private String region;
 
     @NotNull(message = "baseRate cannot be null")
     @Positive(message = "baseRate must be greater than zero")
+    /** Base rate applied to the service zone. */
     private Double baseRate;
 
     @Builder
