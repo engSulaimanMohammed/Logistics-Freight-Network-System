@@ -76,7 +76,12 @@ public class StaffService {
         return staff;
     }
 
-    public Staff updateStaff(Long id, String name, String role, String phoneNumber, Long warehouseId) {
+    public Staff updateStaff(
+            Long id,
+            String name,
+            String role,
+            String phoneNumber,
+            Long warehouseId) {
         validateStaffData(name, role, phoneNumber);
         Staff staff = getById(id);
         Warehouse warehouse = warehouseService.getById(warehouseId);
