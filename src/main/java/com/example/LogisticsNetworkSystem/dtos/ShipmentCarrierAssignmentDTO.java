@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 public class ShipmentCarrierAssignmentDTO {
     @NotNull(message = "shipmentId cannot be null")
     @Positive(message = "shipmentId must be greater than zero")
+    /** Identifier of the shipment receiving the carrier assignment. */
     private Long shipmentId;
 
     @NotNull(message = "carrierId cannot be null")
     @Positive(message = "carrierId must be greater than zero")
+    /** Identifier of the carrier assigned to the shipment. */
     private Long carrierId;
 
     @Builder
