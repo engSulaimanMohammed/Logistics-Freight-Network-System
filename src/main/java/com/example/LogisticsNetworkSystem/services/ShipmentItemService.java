@@ -39,6 +39,7 @@ public class ShipmentItemService {
         validateShipmentItemData(shipmentItem.getQuantity());
         Shipment shipment = shipmentService.getById(shipmentId);
         shipmentItem.setShipment(shipment);
+
         Product product = productService.getById(productId);
         shipmentItem.setProduct(product);
         shipmentItem.setActive(true);
