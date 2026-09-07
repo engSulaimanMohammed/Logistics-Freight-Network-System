@@ -14,7 +14,9 @@ public class StaffService {
     private final StaffRepository staffRepository;
     private final WarehouseService warehouseService;
 
-    public StaffService(StaffRepository staffRepository, WarehouseService warehouseService) {
+    public StaffService(
+            StaffRepository staffRepository,
+            WarehouseService warehouseService) {
         this.staffRepository = staffRepository;
         this.warehouseService = warehouseService;
     }
