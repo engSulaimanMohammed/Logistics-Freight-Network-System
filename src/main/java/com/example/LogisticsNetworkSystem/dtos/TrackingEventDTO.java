@@ -63,6 +63,7 @@ public class TrackingEventDTO {
         this.shipmentId = shipmentId;
     }
 
+    /** Converts a TrackingEvent entity into its API transfer representation. */
     public static TrackingEventDTO convertToDTO(TrackingEvent entity) {
         if (entity == null) {
             return null;
@@ -77,6 +78,7 @@ public class TrackingEventDTO {
                 .build();
     }
 
+    /** Converts a collection of TrackingEvent entities into response DTOs. */
     public static List<TrackingEventDTO> convertToDTO(List<TrackingEvent> entities) {
         return entities.stream()
                 .map(TrackingEventDTO::convertToDTO)
