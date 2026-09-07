@@ -19,6 +19,7 @@ public class TrackingEventController {
         this.trackingEventService = trackingEventService;
     }
 
+    /** Maps event details from the request DTO into a service-layer entity. */
     private TrackingEvent fromDTO(TrackingEventDTO dto) {
         TrackingEvent event = new TrackingEvent();
         event.setEventTime(dto.getEventTime());
