@@ -8,9 +8,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class CarrierStatsDTO {
+    /** Identifier of the carrier represented by these metrics. */
     private Long carrierId;
+    /** Number of vehicles associated with the carrier. */
     private long vehicles;
+    /** Number of drivers associated with the carrier. */
     private long drivers;
+    /** Number of active routes associated with the carrier. */
     private long activeRoutes;
 
     @Builder
