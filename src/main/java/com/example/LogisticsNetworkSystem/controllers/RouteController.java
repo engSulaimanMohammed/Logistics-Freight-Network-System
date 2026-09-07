@@ -22,6 +22,7 @@ public class RouteController {
         this.routeService = routeService;
     }
 
+    /** Creates a route from the DTO and associates it with a vehicle and driver. */
     @PostMapping("/add")
     public RouteDTO add(@Valid @RequestBody RouteDTO dto) {
         Route route = new Route();
