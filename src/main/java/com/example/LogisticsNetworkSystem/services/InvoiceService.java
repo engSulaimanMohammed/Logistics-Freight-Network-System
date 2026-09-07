@@ -29,7 +29,9 @@ public class InvoiceService {
         if (amount == null || amount <= 0) {
             throw new IllegalArgumentException("Amount must be greater than zero");
         }
-        if (status == null || status.trim().isEmpty()) throw new IllegalArgumentException("Status cannot be blank");
+        if (status == null || status.trim().isEmpty()) {
+            throw new IllegalArgumentException("Status cannot be blank");
+        }
         if (status.length() > 255) throw new IllegalArgumentException("Status cannot exceed 255 characters");
         if (issuedDate == null) throw new IllegalArgumentException("Issued date cannot be null");
         if (issuedDate.after(new Date())) throw new IllegalArgumentException("Issued date cannot be in the future");
