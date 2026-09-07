@@ -26,7 +26,9 @@ public class InvoiceService {
     }
 
     private void validateData(Double amount, String status, Date issuedDate) {
-        if (amount == null || amount <= 0) throw new IllegalArgumentException("Amount must be greater than zero");
+        if (amount == null || amount <= 0) {
+            throw new IllegalArgumentException("Amount must be greater than zero");
+        }
         if (status == null || status.trim().isEmpty()) throw new IllegalArgumentException("Status cannot be blank");
         if (status.length() > 255) throw new IllegalArgumentException("Status cannot exceed 255 characters");
         if (issuedDate == null) throw new IllegalArgumentException("Issued date cannot be null");
