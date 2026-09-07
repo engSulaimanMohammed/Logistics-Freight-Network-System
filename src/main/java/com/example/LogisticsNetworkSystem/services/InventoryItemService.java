@@ -43,7 +43,8 @@ public class InventoryItemService {
         if (inventoryItem == null) {
             throw new IllegalArgumentException("InventoryItem cannot be null");
         }
-        validateInventoryItemData(inventoryItem.getQuantity(), inventoryItem.getShelfLocation());
+        validateInventoryItemData(
+                inventoryItem.getQuantity(), inventoryItem.getShelfLocation());
         Warehouse warehouse = warehouseService.getById(warehouseId);
         inventoryItem.setWarehouse(warehouse);
         Product product = productService.getById(productId);
