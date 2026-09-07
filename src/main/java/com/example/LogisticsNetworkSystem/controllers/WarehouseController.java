@@ -48,11 +48,13 @@ public class WarehouseController {
         return WarehouseDTO.convertToDTO(warehouseService.updateWarehouse(id, dto.getName(), dto.getLocation(), dto.getCapacity()));
     }
 
+/** Returns statistics for the warehouse identified by {@code id}. */
 @GetMapping("/stats/{id}")
 public WarehouseStatsDTO getStats(@PathVariable Long id) {
     return warehouseService.getStats(id);
 }
 
+    /** Deletes the selected warehouse and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public WarehouseDTO delete(@PathVariable Long id) {
         WarehouseDTO dto = WarehouseDTO.convertToDTO(warehouseService.getById(id));
