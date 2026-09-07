@@ -55,12 +55,14 @@ public class TrackingEventController {
         return TrackingEventDTO.convertToDTO(trackingEventService.getById(id));
     }
 
+    /** Updates the event identified by {@code id} with the validated request DTO. */
     @PutMapping("/update/{id}")
     public TrackingEventDTO update(@PathVariable Long id, @Valid @RequestBody TrackingEventDTO dto) {
         return TrackingEventDTO.convertToDTO(trackingEventService.updateTrackingEvent(
                 id, dto.getEventTime(), dto.getLocation(), dto.getStatus(), dto.getNote(), dto.getShipmentId()));
     }
 
+    /** Deletes the selected tracking event and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public TrackingEventDTO delete(@PathVariable Long id) {
         TrackingEventDTO dto = TrackingEventDTO.convertToDTO(trackingEventService.getById(id));
