@@ -44,7 +44,8 @@ public class ServiceZoneService {
         if (serviceZone == null) {
             throw new IllegalArgumentException("ServiceZone cannot be null");
         }
-        validateServiceZoneData(serviceZone.getName(), serviceZone.getRegion(), serviceZone.getBaseRate());
+        validateServiceZoneData(
+                serviceZone.getName(), serviceZone.getRegion(), serviceZone.getBaseRate());
         serviceZone.setActive(true);
         serviceZone.setCreatedDate(new Date());
         return serviceZoneRepository.save(serviceZone);
