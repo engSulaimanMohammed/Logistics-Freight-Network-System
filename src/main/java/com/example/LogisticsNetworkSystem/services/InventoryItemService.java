@@ -73,7 +73,12 @@ public class InventoryItemService {
         return inventoryItem;
     }
 
-    public InventoryItem updateInventoryItem(Long id, Integer quantity, String shelfLocation, Long warehouseId, Long productId) {
+    public InventoryItem updateInventoryItem(
+            Long id,
+            Integer quantity,
+            String shelfLocation,
+            Long warehouseId,
+            Long productId) {
         validateInventoryItemData(quantity, shelfLocation);
         InventoryItem inventoryItem = getById(id);
         Warehouse warehouse = warehouseService.getById(warehouseId);
