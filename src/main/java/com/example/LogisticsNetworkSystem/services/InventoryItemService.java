@@ -61,7 +61,8 @@ public class InventoryItemService {
     }
 
     public InventoryItem getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("InventoryItem ID must be greater than zero");
         }
         InventoryItem inventoryItem = inventoryItemRepository.findById(id)
