@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/customer")
 public class CustomerController {
 
+    /** Coordinates customer persistence and business queries through the service layer. */
     private final CustomerService customerService;
 
     public CustomerController(CustomerService customerService) {
