@@ -4,11 +4,11 @@ import com.example.LogisticsNetworkSystem.entities.Customer;
 import com.example.LogisticsNetworkSystem.entities.Invoice;
 import com.example.LogisticsNetworkSystem.entities.Shipment;
 import com.example.LogisticsNetworkSystem.exceptions.ResourceNotFoundException;
-import com.example.LogisticsNetworkSystem.repositories.InvoiceRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.Date;
 import java.util.List;
+
+import com.example.LogisticsNetworkSystem.repositories.InvoiceRepository;
+import org.springframework.stereotype.Service;
 
 @Service
 public class InvoiceService {
