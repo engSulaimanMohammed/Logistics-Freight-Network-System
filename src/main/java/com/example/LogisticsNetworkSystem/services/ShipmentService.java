@@ -101,7 +101,8 @@ public class ShipmentService {
             InventoryItem inventoryItem = inventoryItemRepository
                     .findByWarehouse_IdAndProduct_IdAndIsActiveTrue(warehouseId, product.getId())
                     .orElseThrow(() -> new IllegalArgumentException("Product is out of stock in this warehouse"));
-            if (inventoryItem.getQuantity() < itemDTO.getQuantity()) {
+            if (inventoryItem.getQuantity()
+                    < itemDTO.getQuantity()) {
                 throw new IllegalArgumentException("Product is out of stock in the requested quantity");
             }
             inventoryItem.setQuantity(inventoryItem.getQuantity() - itemDTO.getQuantity());
