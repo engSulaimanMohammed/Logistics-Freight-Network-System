@@ -85,7 +85,12 @@ public class CustomerService {
         return customer;
     }
 
-    public Customer updateCustomer(Long id, String name, String email, String phoneNumber, String type) {
+    public Customer updateCustomer(
+            Long id,
+            String name,
+            String email,
+            String phoneNumber,
+            String type) {
         validateCustomerData(name, email, phoneNumber, type);
         Customer customer = getById(id);
         customer.setName(name);
