@@ -83,7 +83,8 @@ public class ProductService {
             String sku,
             Double weightKg,
             String category) {
-        validateProductData(name, sku, weightKg, category);
+        validateProductData(
+                name, sku, weightKg, category);
         Product product = getById(id);
         product.setName(name);
         product.setSku(sku);
