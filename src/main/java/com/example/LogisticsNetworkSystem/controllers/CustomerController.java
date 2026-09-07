@@ -20,6 +20,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
+    /** Creates a customer from the validated request DTO. */
     @PostMapping("/add")
     public CustomerDTO add(@Valid @RequestBody CustomerDTO dto) {
         Customer customer = new Customer();
