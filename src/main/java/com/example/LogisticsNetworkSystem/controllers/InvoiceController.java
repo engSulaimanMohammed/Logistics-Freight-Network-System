@@ -53,6 +53,7 @@ public class InvoiceController {
         return InvoiceDTO.convertToDTO(invoiceService.getById(id));
     }
 
+    /** Updates the invoice identified by {@code id} with the validated request DTO. */
     @PutMapping("/update/{id}")
     public InvoiceDTO update(@PathVariable Long id, @Valid @RequestBody InvoiceDTO dto) {
         return InvoiceDTO.convertToDTO(invoiceService.updateInvoice(
@@ -60,11 +61,13 @@ public class InvoiceController {
                 dto.getShipmentId(), dto.getCustomerId()));
     }
 
+    /** Retrieves unpaid invoices for the customer identified by {@code customerId}. */
     @GetMapping("/unpaidByCustomer/{customerId}")
     public List<InvoiceDTO> unpaidByCustomer(@PathVariable Long customerId) {
         return InvoiceDTO.convertToDTO(invoiceService.getUnpaidInvoicesByCustomer(customerId));
     }
 
+    /** Deletes the selected invoice and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public InvoiceDTO delete(@PathVariable Long id) {
         InvoiceDTO dto = InvoiceDTO.convertToDTO(invoiceService.getById(id));
