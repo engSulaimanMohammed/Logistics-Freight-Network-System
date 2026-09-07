@@ -17,28 +17,34 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DriverDTO {
 
+    /** Unique identifier of the driver. */
     private Long id;
 
     @NotBlank(message = "name cannot be blank")
     @Size(max = 255, message = "name cannot exceed 255 characters")
+    /** Driver name presented through the API. */
     private String name;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotBlank(message = "licenseNumber cannot be blank")
     @Size(max = 255, message = "licenseNumber cannot exceed 255 characters")
+    /** Driver license number supplied for operational records. */
     private String licenseNumber;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotBlank(message = "phoneNumber cannot be blank")
     @Size(max = 255, message = "phoneNumber cannot exceed 255 characters")
+    /** Phone number used to contact the driver. */
     private String phoneNumber;
 
     @NotBlank(message = "status cannot be blank")
     @Size(max = 255, message = "status cannot exceed 255 characters")
+    /** Current operational status of the driver. */
     private String status;
 
     @NotNull(message = "carrierId cannot be null")
     @Positive(message = "carrierId must be greater than zero")
+    /** Identifier of the carrier employing or managing the driver. */
     private Long carrierId;
 
     @Builder
