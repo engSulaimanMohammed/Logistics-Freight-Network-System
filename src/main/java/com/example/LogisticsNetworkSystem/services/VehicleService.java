@@ -105,6 +105,7 @@ public class VehicleService {
     public boolean deleteById(Long id) {
         Vehicle vehicle = getById(id);
         vehicle.setActive(false);
+
         vehicle.setUpdatedDate(new Date());
         vehicleRepository.save(vehicle);
         return true;
