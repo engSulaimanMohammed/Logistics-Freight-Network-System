@@ -13,6 +13,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries invoice amounts, payment status, dates, and related records. */
 @Data
 @NoArgsConstructor
 public class InvoiceDTO {
