@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 
+/** Exposes REST operations for route planning and route management. */
 @RestController
 @RequestMapping("/route")
 public class RouteController {
