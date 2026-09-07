@@ -57,6 +57,7 @@ public class RouteController {
         return RouteDTO.convertToDTO(routeService.getById(id));
     }
 
+    /** Updates the route identified by {@code id} with the validated request DTO. */
     @PutMapping("/update/{id}")
     public RouteDTO update(@PathVariable Long id, @Valid @RequestBody RouteDTO dto) {
         return RouteDTO.convertToDTO(routeService.updateRoute(
