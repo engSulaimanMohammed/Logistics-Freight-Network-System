@@ -88,6 +88,7 @@ public class ServiceZoneService {
     public boolean deleteById(Long id) {
         ServiceZone serviceZone = getById(id);
         serviceZone.setActive(false);
+
         serviceZone.setUpdatedDate(new Date());
         serviceZoneRepository.save(serviceZone);
         return true;
