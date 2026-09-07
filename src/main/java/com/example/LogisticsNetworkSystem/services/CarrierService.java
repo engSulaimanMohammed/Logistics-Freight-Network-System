@@ -45,7 +45,8 @@ public class CarrierService {
         if (contactEmail.length() > 255) {
             throw new IllegalArgumentException("ContactEmail cannot exceed 255 characters");
         }
-        if (!contactEmail.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+        if (!contactEmail.matches(
+                "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
             throw new IllegalArgumentException("Contact email must be valid");
         }
         if (phoneNumber == null || phoneNumber.trim().isEmpty()) {
