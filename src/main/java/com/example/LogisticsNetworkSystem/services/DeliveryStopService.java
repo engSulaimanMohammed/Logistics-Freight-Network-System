@@ -104,7 +104,8 @@ public class DeliveryStopService {
 
         Long routeId = saved.getRoute().getId();
         long allStops = deliveryStopRepository.countByRoute_IdAndIsActiveTrue(routeId);
-        long completedStops = deliveryStopRepository.countByRoute_IdAndStatusIgnoreCaseAndIsActiveTrue(routeId, "Complete");
+        long completedStops = deliveryStopRepository
+                .countByRoute_IdAndStatusIgnoreCaseAndIsActiveTrue(routeId, "Complete");
         if (allStops > 0 && allStops == completedStops) {
             routeService.markComplete(routeId);
         }
