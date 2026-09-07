@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/** Exposes REST operations for route delivery stop management. */
 @RestController
 @RequestMapping("/deliveryStop")
 public class DeliveryStopController {
