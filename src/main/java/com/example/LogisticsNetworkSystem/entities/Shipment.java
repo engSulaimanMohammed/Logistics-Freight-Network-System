@@ -28,11 +28,11 @@ public class Shipment extends BaseClass {
     @ManyToOne
     private Carrier carrier;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "shipment")
+    @JsonIgnore
     private List<ShipmentItem> shipmentItems = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(mappedBy = "shipment")
+    @JsonIgnore
     private List<TrackingEvent> trackingEvents = new ArrayList<>();
 }
