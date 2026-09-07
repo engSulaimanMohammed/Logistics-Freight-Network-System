@@ -33,6 +33,7 @@ public class RouteController {
         return RouteDTO.convertToDTO(routeService.addRoute(route, dto.getVehicleId(), dto.getDriverId()));
     }
 
+    /** Builds a route using the supplied vehicle, driver, and shipment relationships. */
     @PostMapping("/build")
     public RouteDTO build(@Valid @RequestBody RouteBuildDTO dto) {
         Route route = new Route();
