@@ -67,7 +67,9 @@ public class TrackingEventService {
     }
 
     public List<TrackingEvent> getAllTrackingEvents() {
-        return trackingEventRepository.findAll().stream().filter(TrackingEvent::isActive).toList();
+        return trackingEventRepository.findAll().stream()
+                .filter(TrackingEvent::isActive)
+                .toList();
     }
 
     public TrackingEvent getById(Long id) {
