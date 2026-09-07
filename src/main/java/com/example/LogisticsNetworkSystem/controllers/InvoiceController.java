@@ -35,6 +35,7 @@ public class InvoiceController {
                 fromDTO(dto), dto.getShipmentId(), dto.getCustomerId()));
     }
 
+    /** Generates an invoice for the shipment supplied in the request DTO. */
     @PostMapping("/generate")
     public InvoiceDTO generate(@Valid @RequestBody InvoiceDTO dto) {
         return InvoiceDTO.convertToDTO(invoiceService.generateInvoice(fromDTO(dto), dto.getShipmentId()));
