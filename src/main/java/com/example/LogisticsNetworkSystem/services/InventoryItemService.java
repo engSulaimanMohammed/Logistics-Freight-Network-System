@@ -30,7 +30,8 @@ public class InventoryItemService {
                 || quantity < 0) {
             throw new IllegalArgumentException("Quantity cannot be negative");
         }
-        if (shelfLocation == null || shelfLocation.trim().isEmpty()) {
+        if (shelfLocation == null
+                || shelfLocation.trim().isEmpty()) {
             throw new IllegalArgumentException("ShelfLocation cannot be blank");
         }
         if (shelfLocation.length() > 255) {
