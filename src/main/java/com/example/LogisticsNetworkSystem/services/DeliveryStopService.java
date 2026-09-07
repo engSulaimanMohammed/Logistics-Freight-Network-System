@@ -29,7 +29,9 @@ public class DeliveryStopService {
         if (sequence == null || sequence <= 0) {
             throw new IllegalArgumentException("Sequence must be greater than zero");
         }
-        if (address == null || address.trim().isEmpty()) throw new IllegalArgumentException("Address cannot be blank");
+        if (address == null || address.trim().isEmpty()) {
+            throw new IllegalArgumentException("Address cannot be blank");
+        }
         if (address.length() > 255) throw new IllegalArgumentException("Address cannot exceed 255 characters");
         if (status == null || status.trim().isEmpty()) throw new IllegalArgumentException("Status cannot be blank");
         if (status.length() > 255) throw new IllegalArgumentException("Status cannot exceed 255 characters");
