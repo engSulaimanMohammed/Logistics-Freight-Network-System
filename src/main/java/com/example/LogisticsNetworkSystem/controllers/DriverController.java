@@ -48,6 +48,7 @@ public class DriverController {
         return DriverDTO.convertToDTO(driverService.updateDriver(id, dto.getName(), dto.getLicenseNumber(), dto.getPhoneNumber(), dto.getStatus(), dto.getCarrierId()));
     }
 
+    /** Deletes the selected driver and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public DriverDTO delete(@PathVariable Long id) {
         DriverDTO dto = DriverDTO.convertToDTO(driverService.getById(id));
