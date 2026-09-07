@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/inventoryItem")
 public class InventoryItemController {
 
+    /** Coordinates inventory persistence and warehouse/product associations. */
     private final InventoryItemService inventoryItemService;
 
     public InventoryItemController(InventoryItemService inventoryItemService) {
