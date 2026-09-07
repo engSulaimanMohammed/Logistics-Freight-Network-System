@@ -16,18 +16,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class WarehouseDTO {
 
+    /** Unique identifier of the warehouse. */
     private Long id;
 
     @NotBlank(message = "name cannot be blank")
     @Size(max = 255, message = "name cannot exceed 255 characters")
+    /** Warehouse name presented through the API. */
     private String name;
 
     @NotBlank(message = "location cannot be blank")
     @Size(max = 255, message = "location cannot exceed 255 characters")
+    /** Physical location of the warehouse. */
     private String location;
 
     @NotNull(message = "capacity cannot be null")
     @Positive(message = "capacity must be greater than zero")
+    /** Storage capacity recorded for the warehouse. */
     private Integer capacity;
 
     @Builder
