@@ -11,6 +11,7 @@ import lombok.Setter;
 @Entity
 public class Address extends BaseClass {
     private String street;
+
     private String city;
     private String postalCode;
     private String country;
