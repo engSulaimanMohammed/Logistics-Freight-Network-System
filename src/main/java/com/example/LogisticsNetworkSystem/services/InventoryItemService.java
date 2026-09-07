@@ -55,7 +55,9 @@ public class InventoryItemService {
     }
 
     public List<InventoryItem> getAllInventoryItems() {
-        return inventoryItemRepository.findAll().stream().filter(InventoryItem::isActive).toList();
+        return inventoryItemRepository.findAll().stream()
+                .filter(InventoryItem::isActive)
+                .toList();
     }
 
     public InventoryItem getById(Long id) {
