@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries vehicle specifications, operating status, and carrier relationship data. */
 @Data
 @NoArgsConstructor
 public class VehicleDTO {
