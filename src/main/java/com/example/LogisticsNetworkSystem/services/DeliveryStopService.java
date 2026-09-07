@@ -72,8 +72,14 @@ public class DeliveryStopService {
         return stop;
     }
 
-    public DeliveryStop updateDeliveryStop(Long id, Integer sequence, String address, String status, Date eta,
-                                           Long routeId, Long shipmentId) {
+    public DeliveryStop updateDeliveryStop(
+            Long id,
+            Integer sequence,
+            String address,
+            String status,
+            Date eta,
+            Long routeId,
+            Long shipmentId) {
         validateData(sequence, address, status, eta);
         DeliveryStop stop = getById(id);
         if ((!stop.getRoute().getId().equals(routeId) || !stop.getSequence().equals(sequence))
