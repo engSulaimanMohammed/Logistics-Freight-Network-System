@@ -70,7 +70,8 @@ public class AddressService {
     }
 
     public Address getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Address ID must be greater than zero");
         }
         Address address = addressRepository.findById(id)
