@@ -31,6 +31,7 @@ public class CarrierController {
         return CarrierDTO.convertToDTO(carrierService.addCarrier(carrier));
     }
 
+    /** Returns all carriers as response DTOs. */
     @GetMapping("/getAll")
     public List<CarrierDTO> getAll() {
         return CarrierDTO.convertToDTO(carrierService.getAllCarriers());
