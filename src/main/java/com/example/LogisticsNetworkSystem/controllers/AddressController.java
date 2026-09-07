@@ -30,8 +30,8 @@ public class AddressController {
         return AddressDTO.convertToDTO(addressService.addAddress(address, dto.getCustomerId()));
     }
 
+    /** Returns all stored addresses as response DTOs. */
     @GetMapping("/getAll")
-    // Retrieves all addresses and converts the entities to response DTOs.
     public List<AddressDTO> getAll() {
         return AddressDTO.convertToDTO(addressService.getAllAddresss());
     }
