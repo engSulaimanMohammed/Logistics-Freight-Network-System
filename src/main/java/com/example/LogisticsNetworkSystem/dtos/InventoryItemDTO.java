@@ -12,6 +12,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries warehouse inventory quantities, locations, and product relationships. */
 @Data
 @NoArgsConstructor
 public class InventoryItemDTO {
