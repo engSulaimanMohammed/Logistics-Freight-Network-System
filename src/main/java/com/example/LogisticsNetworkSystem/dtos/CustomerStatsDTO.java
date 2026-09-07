@@ -14,6 +14,7 @@ public class CustomerStatsDTO {
     private double totalInvoicedAmount;
 
     @Builder
+    /** Builds customer metrics from values transferred through the API. */
     public CustomerStatsDTO(Long customerId, double totalInvoicedAmount) {
         this.customerId = customerId;
         this.totalInvoicedAmount = totalInvoicedAmount;
