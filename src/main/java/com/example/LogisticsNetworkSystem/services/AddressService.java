@@ -82,7 +82,13 @@ public class AddressService {
         return address;
     }
 
-    public Address updateAddress(Long id, String street, String city, String postalCode, String country, Long customerId) {
+    public Address updateAddress(
+            Long id,
+            String street,
+            String city,
+            String postalCode,
+            String country,
+            Long customerId) {
         validateAddressData(street, city, postalCode, country);
         Address address = getById(id);
         Customer customer = customerService.getById(customerId);
