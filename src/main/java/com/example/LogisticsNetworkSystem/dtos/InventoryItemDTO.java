@@ -40,6 +40,7 @@ public class InventoryItemDTO {
     /** Identifier of the product represented by the item. */
     private Long productId;
 
+    /** Builds a InventoryItemDTO from values transferred through the API. */
     @Builder
     public InventoryItemDTO(
             Long id,
