@@ -54,7 +54,8 @@ public class ShipmentItemService {
     }
 
     public ShipmentItem getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("ShipmentItem ID must be greater than zero");
         }
         ShipmentItem shipmentItem = shipmentItemRepository.findById(id)
