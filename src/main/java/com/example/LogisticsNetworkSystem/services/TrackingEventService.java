@@ -82,8 +82,13 @@ public class TrackingEventService {
         return event;
     }
 
-    public TrackingEvent updateTrackingEvent(Long id, Date eventTime, String location, String status, String note,
-                                             Long shipmentId) {
+    public TrackingEvent updateTrackingEvent(
+            Long id,
+            Date eventTime,
+            String location,
+            String status,
+            String note,
+            Long shipmentId) {
         validateData(eventTime, location, status, note);
         TrackingEvent event = getById(id);
         event.setEventTime(eventTime);
