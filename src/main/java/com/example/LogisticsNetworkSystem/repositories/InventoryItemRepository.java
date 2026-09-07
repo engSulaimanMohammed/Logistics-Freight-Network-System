@@ -15,9 +15,9 @@ public interface InventoryItemRepository extends JpaRepository<InventoryItem, Lo
             Long productId
     );
 
-    @Query("SELECT i FROM InventoryItem i WHERE i.quantity < :threshold AND i.isActive = true")
+    @Query(value = "SELECT i FROM InventoryItem i WHERE i.quantity < :threshold AND i.isActive = true")
     List<InventoryItem> findBelowReorderThreshold(@Param("threshold") Integer threshold);
 
-    @Query("SELECT COALESCE(SUM(i.quantity), 0) FROM InventoryItem i WHERE i.warehouse.id = :warehouseId AND i.isActive = true")
+    @Query(value = "SELECT COALESCE(SUM(i.quantity), 0) FROM InventoryItem i WHERE i.warehouse.id = :warehouseId AND i.isActive = true")
     Long totalInventoryUnitsByWarehouse(@Param("warehouseId") Long warehouseId);
 }
