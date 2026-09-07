@@ -132,7 +132,9 @@ public class ShipmentService {
     }
 
     public List<Shipment> getAllShipments() {
-        return shipmentRepository.findAll().stream().filter(Shipment::isActive).toList();
+        return shipmentRepository.findAll().stream()
+                .filter(Shipment::isActive)
+                .toList();
     }
 
     public Shipment getById(Long id) {
