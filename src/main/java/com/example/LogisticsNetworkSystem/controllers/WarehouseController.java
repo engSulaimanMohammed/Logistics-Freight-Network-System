@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/warehouse")
 public class WarehouseController {
 
+    /** Coordinates warehouse persistence and business queries through the service layer. */
     private final WarehouseService warehouseService;
 
     public WarehouseController(WarehouseService warehouseService) {
