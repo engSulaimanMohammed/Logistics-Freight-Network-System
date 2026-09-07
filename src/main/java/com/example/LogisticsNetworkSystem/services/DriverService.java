@@ -105,6 +105,7 @@ public class DriverService {
     public boolean deleteById(Long id) {
         Driver driver = getById(id);
         driver.setActive(false);
+
         driver.setUpdatedDate(new Date());
         driverRepository.save(driver);
         return true;
