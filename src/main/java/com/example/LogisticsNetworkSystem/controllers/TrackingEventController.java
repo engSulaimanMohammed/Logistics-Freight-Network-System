@@ -36,6 +36,7 @@ public class TrackingEventController {
                 trackingEventService.addTrackingEvent(fromDTO(dto), dto.getShipmentId()));
     }
 
+    /** Appends a tracking event to the shipment history from the validated DTO. */
     @PostMapping("/append")
     public TrackingEventDTO append(@Valid @RequestBody TrackingEventDTO dto) {
         return TrackingEventDTO.convertToDTO(
