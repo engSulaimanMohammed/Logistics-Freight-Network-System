@@ -96,8 +96,14 @@ public class RouteService {
         return route;
     }
 
-    public Route updateRoute(Long id, Date routeDate, String origin, String destination, String status,
-                             Long vehicleId, Long driverId) {
+    public Route updateRoute(
+            Long id,
+            Date routeDate,
+            String origin,
+            String destination,
+            String status,
+            Long vehicleId,
+            Long driverId) {
         validateRouteData(routeDate, origin, destination, status);
         Route route = getById(id);
         route.setRouteDate(routeDate);
