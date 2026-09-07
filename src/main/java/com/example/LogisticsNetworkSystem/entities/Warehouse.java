@@ -17,15 +17,15 @@ public class Warehouse extends BaseClass {
     private String location;
     private Integer capacity;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "warehouse")
+    @JsonIgnore
     private List<InventoryItem> inventoryItems = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(mappedBy = "warehouse")
+    @JsonIgnore
     private List<Shipment> shipments = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(mappedBy = "warehouse")
+    @JsonIgnore
     private List<Staff> staff = new ArrayList<>();
 }
