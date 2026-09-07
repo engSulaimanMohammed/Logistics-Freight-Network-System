@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class CustomerStatsDTO {
+    /** Identifier of the customer represented by these metrics. */
     private Long customerId;
+    /** Total amount invoiced for the customer. */
     private double totalInvoicedAmount;
 
     @Builder
