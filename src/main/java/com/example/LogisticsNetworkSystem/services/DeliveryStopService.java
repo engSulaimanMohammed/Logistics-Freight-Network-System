@@ -16,8 +16,10 @@ public class DeliveryStopService {
     private final RouteService routeService;
     private final ShipmentService shipmentService;
 
-    public DeliveryStopService(DeliveryStopRepository deliveryStopRepository, RouteService routeService,
-                               ShipmentService shipmentService) {
+    public DeliveryStopService(
+            DeliveryStopRepository deliveryStopRepository,
+            RouteService routeService,
+            ShipmentService shipmentService) {
         this.deliveryStopRepository = deliveryStopRepository;
         this.routeService = routeService;
         this.shipmentService = shipmentService;
