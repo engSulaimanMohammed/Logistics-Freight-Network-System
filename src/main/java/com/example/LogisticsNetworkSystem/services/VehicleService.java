@@ -22,7 +22,8 @@ public class VehicleService {
     }
 
     private void validateVehicleData(String plateNumber, String type, Double capacityKg, String status) {
-        if (plateNumber == null || plateNumber.trim().isEmpty()) {
+        if (plateNumber == null
+                || plateNumber.trim().isEmpty()) {
             throw new IllegalArgumentException("PlateNumber cannot be blank");
         }
         if (plateNumber.length() > 255) {
