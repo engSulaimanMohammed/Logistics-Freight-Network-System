@@ -97,6 +97,7 @@ public class ProductService {
     public boolean deleteById(Long id) {
         Product product = getById(id);
         product.setActive(false);
+
         product.setUpdatedDate(new Date());
         productRepository.save(product);
         return true;
