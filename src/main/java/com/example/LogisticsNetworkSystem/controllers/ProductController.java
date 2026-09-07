@@ -42,6 +42,7 @@ public class ProductController {
         return ProductDTO.convertToDTO(productService.getById(id));
     }
 
+    /** Updates the product identified by {@code id} with the validated DTO fields. */
     @PutMapping("/update/{id}")
     public ProductDTO update(@PathVariable Long id, @Valid @RequestBody ProductDTO dto) {
         return ProductDTO.convertToDTO(productService.updateProduct(id, dto.getName(), dto.getSku(), dto.getWeightKg(), dto.getCategory()));
