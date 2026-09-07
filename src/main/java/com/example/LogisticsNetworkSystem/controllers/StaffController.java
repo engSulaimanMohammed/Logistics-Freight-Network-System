@@ -35,6 +35,7 @@ public class StaffController {
         return StaffDTO.convertToDTO(staffService.getAllStaffs());
     }
 
+    /** Retrieves the staff record identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public StaffDTO getById(@PathVariable Long id) {
         return StaffDTO.convertToDTO(staffService.getById(id));
