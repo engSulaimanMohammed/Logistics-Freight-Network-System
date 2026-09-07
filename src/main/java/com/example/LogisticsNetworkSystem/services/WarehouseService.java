@@ -27,7 +27,10 @@ public class WarehouseService {
         this.inventoryItemRepository = inventoryItemRepository;
     }
 
-    private void validateWarehouseData(String name, String location, Integer capacity) {
+    private void validateWarehouseData(
+            String name,
+            String location,
+            Integer capacity) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be blank");
         }
