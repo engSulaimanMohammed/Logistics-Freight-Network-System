@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/product")
 public class ProductController {
 
+    /** Coordinates product persistence and catalog queries through the service layer. */
     private final ProductService productService;
 
     public ProductController(ProductService productService) {
