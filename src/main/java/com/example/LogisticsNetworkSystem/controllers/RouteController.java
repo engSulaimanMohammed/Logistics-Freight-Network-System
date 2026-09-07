@@ -65,12 +65,14 @@ public class RouteController {
                 dto.getVehicleId(), dto.getDriverId()));
     }
 
+    /** Finds routes for a driver on the date supplied by the formatted request parameter. */
     @GetMapping("/byDriverAndDate/{driverId}")
     public List<RouteDTO> byDriverAndDate(@PathVariable Long driverId,
                                            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) Date routeDate) {
         return RouteDTO.convertToDTO(routeService.getRoutesForDriverOnDate(driverId, routeDate));
     }
 
+    /** Deletes the selected route and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public RouteDTO delete(@PathVariable Long id) {
         RouteDTO dto = RouteDTO.convertToDTO(routeService.getById(id));
