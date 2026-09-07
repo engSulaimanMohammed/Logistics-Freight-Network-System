@@ -39,6 +39,7 @@ public class ProductDTO {
     /** Catalog category assigned to the product. */
     private String category;
 
+    /** Builds a ProductDTO from values transferred through the API. */
     @Builder
     public ProductDTO(
             Long id,
@@ -53,6 +54,7 @@ public class ProductDTO {
         this.category = category;
     }
 
+    /** Converts a Product entity into its API transfer representation. */
     public static ProductDTO convertToDTO(Product entity) {
         if (entity == null) {
             return null;
@@ -66,6 +68,7 @@ public class ProductDTO {
                 .build();
     }
 
+    /** Converts a collection of Product entities into response DTOs. */
     public static List<ProductDTO> convertToDTO(List<Product> entities) {
         return entities.stream()
                 .map(ProductDTO::convertToDTO)
