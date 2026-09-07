@@ -17,23 +17,28 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class StaffDTO {
 
+    /** Unique identifier of the staff member. */
     private Long id;
 
     @NotBlank(message = "name cannot be blank")
     @Size(max = 255, message = "name cannot exceed 255 characters")
+    /** Staff member name presented through the API. */
     private String name;
 
     @NotBlank(message = "role cannot be blank")
     @Size(max = 255, message = "role cannot exceed 255 characters")
+    /** Operational role assigned to the staff member. */
     private String role;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotBlank(message = "phoneNumber cannot be blank")
     @Size(max = 255, message = "phoneNumber cannot exceed 255 characters")
+    /** Phone number used to contact the staff member. */
     private String phoneNumber;
 
     @NotNull(message = "warehouseId cannot be null")
     @Positive(message = "warehouseId must be greater than zero")
+    /** Identifier of the warehouse associated with the staff member. */
     private Long warehouseId;
 
     @Builder
