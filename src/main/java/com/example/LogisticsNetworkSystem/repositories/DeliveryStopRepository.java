@@ -6,7 +6,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DeliveryStopRepository extends JpaRepository<DeliveryStop, Long> {
-    boolean existsByRoute_IdAndSequenceAndIsActiveTrue(Long routeId, Integer sequence);
+    boolean existsByRoute_IdAndSequenceAndIsActiveTrue(
+            Long routeId,
+            Integer sequence
+    );
     long countByRoute_IdAndIsActiveTrue(Long routeId);
     long countByRoute_IdAndStatusIgnoreCaseAndIsActiveTrue(Long routeId, String status);
 }
