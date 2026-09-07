@@ -26,7 +26,9 @@ public class TrackingEventService {
             throw new IllegalArgumentException("Event time cannot be null");
         }
         if (eventTime.after(new Date())) throw new IllegalArgumentException("Event time cannot be in the future");
-        if (location == null || location.trim().isEmpty()) throw new IllegalArgumentException("Location cannot be blank");
+        if (location == null || location.trim().isEmpty()) {
+            throw new IllegalArgumentException("Location cannot be blank");
+        }
         if (location.length() > 255) throw new IllegalArgumentException("Location cannot exceed 255 characters");
         if (status == null || status.trim().isEmpty()) throw new IllegalArgumentException("Status cannot be blank");
         if (status.length() > 255) throw new IllegalArgumentException("Status cannot exceed 255 characters");
