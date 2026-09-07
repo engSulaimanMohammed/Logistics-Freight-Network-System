@@ -48,8 +48,8 @@ public class AddressController {
         return AddressDTO.convertToDTO(addressService.updateAddress(id, dto.getStreet(), dto.getCity(), dto.getPostalCode(), dto.getCountry(), dto.getCustomerId()));
     }
 
+    /** Deletes the address identified by {@code id} and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
-    // Removes the selected address and returns its DTO representation.
     public AddressDTO delete(@PathVariable Long id) {
         AddressDTO dto = AddressDTO.convertToDTO(addressService.getById(id));
         addressService.deleteById(id);
