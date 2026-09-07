@@ -66,7 +66,11 @@ public class ShipmentItemService {
         return shipmentItem;
     }
 
-    public ShipmentItem updateShipmentItem(Long id, Integer quantity, Long shipmentId, Long productId) {
+    public ShipmentItem updateShipmentItem(
+            Long id,
+            Integer quantity,
+            Long shipmentId,
+            Long productId) {
         validateShipmentItemData(quantity);
         ShipmentItem shipmentItem = getById(id);
         Shipment shipment = shipmentService.getById(shipmentId);
