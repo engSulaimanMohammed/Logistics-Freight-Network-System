@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Describes customer-level invoice metrics returned by the API. */
 @Data
 @NoArgsConstructor
 public class CustomerStatsDTO {
