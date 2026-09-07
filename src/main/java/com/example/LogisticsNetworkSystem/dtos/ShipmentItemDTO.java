@@ -31,6 +31,7 @@ public class ShipmentItemDTO {
     /** Identifier of the product represented by the item. */
     private Long productId;
 
+    /** Builds a ShipmentItemDTO from values transferred through the API. */
     @Builder
     public ShipmentItemDTO(
             Long id,
@@ -43,6 +44,7 @@ public class ShipmentItemDTO {
         this.productId = productId;
     }
 
+    /** Converts a ShipmentItem entity into its API transfer representation. */
     public static ShipmentItemDTO convertToDTO(ShipmentItem entity) {
         if (entity == null) {
             return null;
@@ -55,6 +57,7 @@ public class ShipmentItemDTO {
                 .build();
     }
 
+    /** Converts a collection of ShipmentItem entities into response DTOs. */
     public static List<ShipmentItemDTO> convertToDTO(List<ShipmentItem> entities) {
         return entities.stream()
                 .map(ShipmentItemDTO::convertToDTO)
