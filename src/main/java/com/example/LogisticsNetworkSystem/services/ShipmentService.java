@@ -150,8 +150,14 @@ public class ShipmentService {
         return shipment;
     }
 
-    public Shipment updateShipment(Long id, Date shipmentDate, String status, Double totalWeight,
-                                   Long warehouseId, Long customerId, Long carrierId) {
+    public Shipment updateShipment(
+            Long id,
+            Date shipmentDate,
+            String status,
+            Double totalWeight,
+            Long warehouseId,
+            Long customerId,
+            Long carrierId) {
         validateShipmentData(shipmentDate, status, totalWeight);
         Shipment shipment = getById(id);
         shipment.setShipmentDate(shipmentDate);
