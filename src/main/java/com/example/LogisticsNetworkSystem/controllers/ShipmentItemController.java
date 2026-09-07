@@ -19,6 +19,7 @@ public class ShipmentItemController {
         this.shipmentItemService = shipmentItemService;
     }
 
+    /** Creates an item from the DTO and links it to a shipment and product. */
     @PostMapping("/add")
     public ShipmentItemDTO add(@Valid @RequestBody ShipmentItemDTO dto) {
         ShipmentItem shipmentItem = new ShipmentItem();
