@@ -67,7 +67,8 @@ public class VehicleService {
     }
 
     public Vehicle getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Vehicle ID must be greater than zero");
         }
         Vehicle vehicle = vehicleRepository.findById(id)
