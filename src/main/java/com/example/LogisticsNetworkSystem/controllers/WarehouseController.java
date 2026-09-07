@@ -42,6 +42,7 @@ public class WarehouseController {
         return WarehouseDTO.convertToDTO(warehouseService.getById(id));
     }
 
+    /** Updates the warehouse identified by {@code id} with the validated DTO fields. */
     @PutMapping("/update/{id}")
     public WarehouseDTO update(@PathVariable Long id, @Valid @RequestBody WarehouseDTO dto) {
         return WarehouseDTO.convertToDTO(warehouseService.updateWarehouse(id, dto.getName(), dto.getLocation(), dto.getCapacity()));
