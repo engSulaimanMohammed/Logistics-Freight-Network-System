@@ -13,6 +13,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries shipment tracking updates, locations, timestamps, and notes. */
 @Data
 @NoArgsConstructor
 public class TrackingEventDTO {
