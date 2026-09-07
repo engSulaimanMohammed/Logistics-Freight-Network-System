@@ -36,8 +36,8 @@ public class AddressController {
         return AddressDTO.convertToDTO(addressService.getAllAddresss());
     }
 
+    /** Retrieves the address identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
-    // Retrieves an address by its unique identifier.
     public AddressDTO getById(@PathVariable Long id) {
         return AddressDTO.convertToDTO(addressService.getById(id));
     }
