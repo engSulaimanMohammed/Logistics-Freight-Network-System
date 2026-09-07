@@ -29,7 +29,8 @@ public class DriverService {
         if (name.length() > 255) {
             throw new IllegalArgumentException("Name cannot exceed 255 characters");
         }
-        if (licenseNumber == null || licenseNumber.trim().isEmpty()) {
+        if (licenseNumber == null
+                || licenseNumber.trim().isEmpty()) {
             throw new IllegalArgumentException("LicenseNumber cannot be blank");
         }
         if (licenseNumber.length() > 255) {
