@@ -29,7 +29,8 @@ public class ProductService {
         if (name.length() > 255) {
             throw new IllegalArgumentException("Name cannot exceed 255 characters");
         }
-        if (sku == null || sku.trim().isEmpty()) {
+        if (sku == null
+                || sku.trim().isEmpty()) {
             throw new IllegalArgumentException("Sku cannot be blank");
         }
         if (sku.length() > 255) {
