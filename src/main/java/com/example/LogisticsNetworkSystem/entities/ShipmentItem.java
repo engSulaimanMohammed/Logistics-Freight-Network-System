@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class ShipmentItem extends BaseClass {
+
     private Integer quantity;
 
     @ManyToOne
