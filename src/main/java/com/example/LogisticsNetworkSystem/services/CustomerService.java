@@ -59,7 +59,8 @@ public class CustomerService {
         if (customer == null) {
             throw new IllegalArgumentException("Customer cannot be null");
         }
-        validateCustomerData(customer.getName(), customer.getEmail(), customer.getPhoneNumber(), customer.getType());
+        validateCustomerData(
+                customer.getName(), customer.getEmail(), customer.getPhoneNumber(), customer.getType());
         customer.setActive(true);
         customer.setCreatedDate(new Date());
         return customerRepository.save(customer);
