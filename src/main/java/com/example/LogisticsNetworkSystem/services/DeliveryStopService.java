@@ -63,7 +63,9 @@ public class DeliveryStopService {
     }
 
     public DeliveryStop getById(Long id) {
-        if (id == null || id <= 0) throw new IllegalArgumentException("DeliveryStop ID must be greater than zero");
+        if (id == null || id <= 0) {
+            throw new IllegalArgumentException("DeliveryStop ID must be greater than zero");
+        }
         DeliveryStop stop = deliveryStopRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("DeliveryStop not found with id: " + id));
         if (!stop.isActive()) throw new ResourceNotFoundException("DeliveryStop not found with id: " + id);
