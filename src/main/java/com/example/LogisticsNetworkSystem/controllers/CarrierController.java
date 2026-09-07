@@ -37,6 +37,7 @@ public class CarrierController {
         return CarrierDTO.convertToDTO(carrierService.getAllCarriers());
     }
 
+    /** Retrieves the carrier identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public CarrierDTO getById(@PathVariable Long id) {
         return CarrierDTO.convertToDTO(carrierService.getById(id));
