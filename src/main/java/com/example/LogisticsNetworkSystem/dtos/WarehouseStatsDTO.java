@@ -8,8 +8,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class WarehouseStatsDTO {
+    /** Identifier of the warehouse represented by these metrics. */
     private Long warehouseId;
+    /** Number of active shipments associated with the warehouse. */
     private long activeShipments;
+    /** Total inventory units held by the warehouse. */
     private long totalInventoryUnits;
 
     @Builder
