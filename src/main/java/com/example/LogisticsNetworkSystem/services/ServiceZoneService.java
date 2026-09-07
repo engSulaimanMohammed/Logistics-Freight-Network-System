@@ -58,7 +58,8 @@ public class ServiceZoneService {
     }
 
     public ServiceZone getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("ServiceZone ID must be greater than zero");
         }
         ServiceZone serviceZone = serviceZoneRepository.findById(id)
