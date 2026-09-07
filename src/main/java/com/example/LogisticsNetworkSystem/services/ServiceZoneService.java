@@ -28,7 +28,8 @@ public class ServiceZoneService {
         if (name.length() > 255) {
             throw new IllegalArgumentException("Name cannot exceed 255 characters");
         }
-        if (region == null || region.trim().isEmpty()) {
+        if (region == null
+                || region.trim().isEmpty()) {
             throw new IllegalArgumentException("Region cannot be blank");
         }
         if (region.length() > 255) {
