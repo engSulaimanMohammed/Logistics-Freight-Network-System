@@ -19,8 +19,8 @@ public class ServiceZoneController {
         this.serviceZoneService = serviceZoneService;
     }
 
+    /** Creates a service zone from the validated request DTO. */
     @PostMapping("/add")
-    // Creates a service zone from the validated request DTO.
     public ServiceZoneDTO add(@Valid @RequestBody ServiceZoneDTO dto) {
         ServiceZone serviceZone = new ServiceZone();
         serviceZone.setName(dto.getName());
