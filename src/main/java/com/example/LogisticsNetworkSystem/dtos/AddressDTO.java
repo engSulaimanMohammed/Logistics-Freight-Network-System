@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries customer address data between the API layer and application services. */
 @Data
 @NoArgsConstructor
 public class AddressDTO {
