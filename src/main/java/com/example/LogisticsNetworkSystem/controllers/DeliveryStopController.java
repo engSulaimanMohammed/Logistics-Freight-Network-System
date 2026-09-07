@@ -20,6 +20,7 @@ public class DeliveryStopController {
         this.deliveryStopService = deliveryStopService;
     }
 
+    /** Creates a stop from the DTO and links it to its route and shipment. */
     @PostMapping("/add")
     public DeliveryStopDTO add(@Valid @RequestBody DeliveryStopDTO dto) {
         DeliveryStop stop = new DeliveryStop();
