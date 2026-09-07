@@ -20,6 +20,7 @@ public class CarrierController {
         this.carrierService = carrierService;
     }
 
+    /** Creates a carrier from the validated request DTO. */
     @PostMapping("/add")
     public CarrierDTO add(@Valid @RequestBody CarrierDTO dto) {
         Carrier carrier = new Carrier();
