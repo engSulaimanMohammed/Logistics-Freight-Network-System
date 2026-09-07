@@ -9,7 +9,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
-    @Query(value = "SELECT v FROM Vehicle v WHERE LOWER(v.status) = LOWER(:status) AND v.isActive = true")
+    @Query(
+            value = "SELECT v FROM Vehicle v "
+                    + "WHERE LOWER(v.status) = LOWER(:status) "
+                    + "AND v.isActive = true"
+    )
     List<Vehicle> findByStatus(@Param("status") String status);
 
     long countByCarrier_IdAndIsActiveTrue(Long carrierId);
