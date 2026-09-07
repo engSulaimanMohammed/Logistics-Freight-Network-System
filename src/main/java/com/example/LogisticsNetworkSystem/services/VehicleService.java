@@ -61,7 +61,9 @@ public class VehicleService {
     }
 
     public List<Vehicle> getAllVehicles() {
-        return vehicleRepository.findAll().stream().filter(Vehicle::isActive).toList();
+        return vehicleRepository.findAll().stream()
+                .filter(Vehicle::isActive)
+                .toList();
     }
 
     public Vehicle getById(Long id) {
