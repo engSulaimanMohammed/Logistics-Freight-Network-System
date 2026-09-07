@@ -43,6 +43,7 @@ public class CarrierController {
         return CarrierDTO.convertToDTO(carrierService.getById(id));
     }
 
+    /** Updates the carrier identified by {@code id} with the validated DTO fields. */
     @PutMapping("/update/{id}")
     public CarrierDTO update(@PathVariable Long id, @Valid @RequestBody CarrierDTO dto) {
         return CarrierDTO.convertToDTO(carrierService.updateCarrier(id, dto.getName(), dto.getContactEmail(), dto.getPhoneNumber(), dto.getCountry()));
