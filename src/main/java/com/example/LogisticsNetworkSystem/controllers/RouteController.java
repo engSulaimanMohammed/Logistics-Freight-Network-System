@@ -15,6 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/route")
 public class RouteController {
+    /** Coordinates route persistence and planning workflows through the service layer. */
     private final RouteService routeService;
 
     public RouteController(RouteService routeService) {
