@@ -29,7 +29,8 @@ public class StaffService {
         if (name.length() > 255) {
             throw new IllegalArgumentException("Name cannot exceed 255 characters");
         }
-        if (role == null || role.trim().isEmpty()) {
+        if (role == null
+                || role.trim().isEmpty()) {
             throw new IllegalArgumentException("Role cannot be blank");
         }
         if (role.length() > 255) {
