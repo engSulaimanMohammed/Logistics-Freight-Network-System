@@ -28,6 +28,7 @@ public class InventoryItemController {
         return InventoryItemDTO.convertToDTO(inventoryItemService.addInventoryItem(inventoryItem, dto.getWarehouseId(), dto.getProductId()));
     }
 
+    /** Returns all inventory items as response DTOs. */
     @GetMapping("/getAll")
     public List<InventoryItemDTO> getAll() {
         return InventoryItemDTO.convertToDTO(inventoryItemService.getAllInventoryItems());
