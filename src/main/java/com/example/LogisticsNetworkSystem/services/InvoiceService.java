@@ -16,8 +16,10 @@ public class InvoiceService {
     private final ShipmentService shipmentService;
     private final CustomerService customerService;
 
-    public InvoiceService(InvoiceRepository invoiceRepository, ShipmentService shipmentService,
-                          CustomerService customerService) {
+    public InvoiceService(
+            InvoiceRepository invoiceRepository,
+            ShipmentService shipmentService,
+            CustomerService customerService) {
         this.invoiceRepository = invoiceRepository;
         this.shipmentService = shipmentService;
         this.customerService = customerService;
