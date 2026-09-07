@@ -45,6 +45,7 @@ public class InvoiceDTO {
     /** Optional identifier of the customer billed by the invoice. */
     private Long customerId;
 
+    /** Builds a InvoiceDTO from values transferred through the API. */
     @Builder
     public InvoiceDTO(
             Long id,
