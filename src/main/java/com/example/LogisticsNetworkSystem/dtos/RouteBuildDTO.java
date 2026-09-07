@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Date;
 
+/** Carries the inputs required to build a route for a shipment. */
 @Data
 @NoArgsConstructor
 public class RouteBuildDTO {
