@@ -22,7 +22,8 @@ public class DriverService {
     }
 
     private void validateDriverData(String name, String licenseNumber, String phoneNumber, String status) {
-        if (name == null || name.trim().isEmpty()) {
+        if (name == null
+                || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be blank");
         }
         if (name.length() > 255) {
