@@ -75,7 +75,9 @@ public class CarrierService {
     }
 
     public List<Carrier> getAllCarriers() {
-        return carrierRepository.findAll().stream().filter(Carrier::isActive).toList();
+        return carrierRepository.findAll().stream()
+                .filter(Carrier::isActive)
+                .toList();
     }
 
     public Carrier getById(Long id) {
