@@ -115,6 +115,7 @@ public class DeliveryStopService {
     public boolean deleteById(Long id) {
         DeliveryStop stop = getById(id);
         stop.setActive(false);
+
         stop.setUpdatedDate(new Date());
         deliveryStopRepository.save(stop);
         return true;
