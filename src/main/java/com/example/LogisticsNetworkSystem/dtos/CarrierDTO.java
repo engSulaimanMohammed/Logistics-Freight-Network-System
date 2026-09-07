@@ -16,25 +16,30 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CarrierDTO {
 
+    /** Unique identifier of the carrier. */
     private Long id;
 
     @NotBlank(message = "name cannot be blank")
     @Size(max = 255, message = "name cannot exceed 255 characters")
+    /** Display name of the carrier. */
     private String name;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotBlank(message = "contactEmail cannot be blank")
     @Size(max = 255, message = "contactEmail cannot exceed 255 characters")
     @Email(message = "contactEmail must be a valid email")
+    /** Email address used to contact the carrier. */
     private String contactEmail;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotBlank(message = "phoneNumber cannot be blank")
     @Size(max = 255, message = "phoneNumber cannot exceed 255 characters")
+    /** Phone number used to contact the carrier. */
     private String phoneNumber;
 
     @NotBlank(message = "country cannot be blank")
     @Size(max = 255, message = "country cannot exceed 255 characters")
+    /** Country in which the carrier operates. */
     private String country;
 
     @Builder
