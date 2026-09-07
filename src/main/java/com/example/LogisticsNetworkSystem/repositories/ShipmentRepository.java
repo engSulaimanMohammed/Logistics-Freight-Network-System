@@ -23,6 +23,10 @@ public interface ShipmentRepository extends JpaRepository<Shipment, Long> {
     )
     List<Shipment> findCustomerShipmentHistory(@Param("customerId") Long customerId);
 
-    @Query(value = "SELECT COUNT(s) FROM Shipment s WHERE s.warehouse.id = :warehouseId AND s.isActive = true")
+    @Query(
+            value = "SELECT COUNT(s) FROM Shipment s "
+                    + "WHERE s.warehouse.id = :warehouseId "
+                    + "AND s.isActive = true"
+    )
     long countActiveShipmentsByWarehouse(@Param("warehouseId") Long warehouseId);
 }
