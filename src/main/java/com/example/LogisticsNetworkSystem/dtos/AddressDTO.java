@@ -16,26 +16,32 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AddressDTO {
 
+    /** Unique identifier of the address. */
     private Long id;
 
     @NotBlank(message = "street cannot be blank")
     @Size(max = 255, message = "street cannot exceed 255 characters")
+    /** Street name and number for the address. */
     private String street;
 
     @NotBlank(message = "city cannot be blank")
     @Size(max = 255, message = "city cannot exceed 255 characters")
+    /** City in which the address is located. */
     private String city;
 
     @NotBlank(message = "postalCode cannot be blank")
     @Size(max = 255, message = "postalCode cannot exceed 255 characters")
+    /** Postal code associated with the address. */
     private String postalCode;
 
     @NotBlank(message = "country cannot be blank")
     @Size(max = 255, message = "country cannot exceed 255 characters")
+    /** Country in which the address is located. */
     private String country;
 
     @NotNull(message = "customerId cannot be null")
     @Positive(message = "customerId must be greater than zero")
+    /** Identifier of the customer associated with the address. */
     private Long customerId;
 
     @Builder
