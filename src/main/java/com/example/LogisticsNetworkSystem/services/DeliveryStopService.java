@@ -40,7 +40,9 @@ public class DeliveryStopService {
     }
 
     public DeliveryStop addDeliveryStop(DeliveryStop stop, Long routeId, Long shipmentId) {
-        if (stop == null) throw new IllegalArgumentException("DeliveryStop cannot be null");
+        if (stop == null) {
+            throw new IllegalArgumentException("DeliveryStop cannot be null");
+        }
         validateData(stop.getSequence(), stop.getAddress(), stop.getStatus(), stop.getEta());
         Route route = routeService.getById(routeId);
         Shipment shipment = shipmentService.getById(shipmentId);
