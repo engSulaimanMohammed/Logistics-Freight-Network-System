@@ -8,9 +8,9 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Product extends BaseClass {
     private String name;
     private String sku;
