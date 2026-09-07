@@ -18,7 +18,10 @@ public class WarehouseService {
     private final ShipmentRepository shipmentRepository;
     private final InventoryItemRepository inventoryItemRepository;
 
-    public WarehouseService(WarehouseRepository warehouseRepository, ShipmentRepository shipmentRepository, InventoryItemRepository inventoryItemRepository) {
+    public WarehouseService(
+            WarehouseRepository warehouseRepository,
+            ShipmentRepository shipmentRepository,
+            InventoryItemRepository inventoryItemRepository) {
         this.warehouseRepository = warehouseRepository;
         this.shipmentRepository = shipmentRepository;
         this.inventoryItemRepository = inventoryItemRepository;
