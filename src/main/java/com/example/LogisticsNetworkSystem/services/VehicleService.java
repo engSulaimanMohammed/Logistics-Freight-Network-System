@@ -4,7 +4,6 @@ import com.example.LogisticsNetworkSystem.entities.Carrier;
 import com.example.LogisticsNetworkSystem.entities.Vehicle;
 import com.example.LogisticsNetworkSystem.exceptions.ResourceNotFoundException;
 import com.example.LogisticsNetworkSystem.repositories.VehicleRepository;
-import com.example.LogisticsNetworkSystem.services.CarrierService;
 import java.util.Date;
 import java.util.List;
 import org.springframework.stereotype.Service;
