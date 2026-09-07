@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
+/** Exposes REST operations for customer management and customer statistics. */
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
