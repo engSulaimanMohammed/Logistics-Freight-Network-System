@@ -48,7 +48,9 @@ public class ShipmentItemService {
     }
 
     public List<ShipmentItem> getAllShipmentItems() {
-        return shipmentItemRepository.findAll().stream().filter(ShipmentItem::isActive).toList();
+        return shipmentItemRepository.findAll().stream()
+                .filter(ShipmentItem::isActive)
+                .toList();
     }
 
     public ShipmentItem getById(Long id) {
