@@ -26,7 +26,8 @@ public class ShipmentItemService {
     }
 
     private void validateShipmentItemData(Integer quantity) {
-        if (quantity == null || quantity <= 0) {
+        if (quantity == null
+                || quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be greater than zero");
         }
     }
