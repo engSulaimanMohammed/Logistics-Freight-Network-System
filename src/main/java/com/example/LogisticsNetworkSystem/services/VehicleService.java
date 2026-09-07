@@ -29,7 +29,8 @@ public class VehicleService {
         if (plateNumber.length() > 255) {
             throw new IllegalArgumentException("PlateNumber cannot exceed 255 characters");
         }
-        if (type == null || type.trim().isEmpty()) {
+        if (type == null
+                || type.trim().isEmpty()) {
             throw new IllegalArgumentException("Type cannot be blank");
         }
         if (type.length() > 255) {
