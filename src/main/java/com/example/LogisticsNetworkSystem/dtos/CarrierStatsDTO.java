@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Describes carrier-level operational metrics returned by the API. */
 @Data
 @NoArgsConstructor
 public class CarrierStatsDTO {
