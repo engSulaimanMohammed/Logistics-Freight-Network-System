@@ -43,11 +43,13 @@ public class TrackingEventController {
                 trackingEventService.appendTrackingEvent(fromDTO(dto), dto.getShipmentId()));
     }
 
+    /** Returns all tracking events as response DTOs. */
     @GetMapping("/getAll")
     public List<TrackingEventDTO> getAll() {
         return TrackingEventDTO.convertToDTO(trackingEventService.getAllTrackingEvents());
     }
 
+    /** Retrieves the tracking event identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public TrackingEventDTO getById(@PathVariable Long id) {
         return TrackingEventDTO.convertToDTO(trackingEventService.getById(id));
