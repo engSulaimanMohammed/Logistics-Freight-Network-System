@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/address")
 public class AddressController {
 
-    // Delegates address persistence and lookup operations to the service layer.
+    /** Coordinates address persistence and lookup through the service layer. */
     private final AddressService addressService;
 
     public AddressController(AddressService addressService) {
