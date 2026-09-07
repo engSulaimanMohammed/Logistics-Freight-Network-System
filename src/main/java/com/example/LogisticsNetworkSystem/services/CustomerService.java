@@ -101,8 +101,8 @@ public class CustomerService {
         return customerRepository.save(customer);
     }
 
-public CustomerStatsDTO getStats(Long customerId) {
-    getById(customerId);
+    public CustomerStatsDTO getStats(Long customerId) {
+        getById(customerId);
     Double total = invoiceRepository.totalInvoicedAmountByCustomer(customerId);
     return CustomerStatsDTO.builder()
             .customerId(customerId)
