@@ -36,6 +36,7 @@ public class ProductController {
         return ProductDTO.convertToDTO(productService.getAllProducts());
     }
 
+    /** Retrieves the product identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public ProductDTO getById(@PathVariable Long id) {
         return ProductDTO.convertToDTO(productService.getById(id));
