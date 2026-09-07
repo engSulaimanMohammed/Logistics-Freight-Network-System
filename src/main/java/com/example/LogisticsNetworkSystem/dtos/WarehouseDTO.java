@@ -47,6 +47,7 @@ public class WarehouseDTO {
         this.capacity = capacity;
     }
 
+    /** Converts a Warehouse entity into its API transfer representation. */
     public static WarehouseDTO convertToDTO(Warehouse entity) {
         if (entity == null) {
             return null;
@@ -59,6 +60,7 @@ public class WarehouseDTO {
                 .build();
     }
 
+    /** Converts a collection of Warehouse entities into response DTOs. */
     public static List<WarehouseDTO> convertToDTO(List<Warehouse> entities) {
         return entities.stream()
                 .map(WarehouseDTO::convertToDTO)
