@@ -15,23 +15,30 @@ import java.util.Date;
 public class RouteBuildDTO {
     @NotNull(message = "shipmentId cannot be null")
     @Positive(message = "shipmentId must be greater than zero")
+    /** Identifier of the shipment assigned to the route being built. */
     private Long shipmentId;
     @NotNull(message = "routeDate cannot be null")
+    /** Date and time planned for the route. */
     private Date routeDate;
     @NotBlank(message = "origin cannot be blank")
     @Size(max = 255, message = "origin cannot exceed 255 characters")
+    /** Starting location of the route. */
     private String origin;
     @NotBlank(message = "destination cannot be blank")
     @Size(max = 255, message = "destination cannot exceed 255 characters")
+    /** Ending location of the route. */
     private String destination;
     @NotBlank(message = "status cannot be blank")
     @Size(max = 255, message = "status cannot exceed 255 characters")
+    /** Initial status supplied for the route. */
     private String status;
     @NotNull(message = "vehicleId cannot be null")
     @Positive(message = "vehicleId must be greater than zero")
+    /** Identifier of the vehicle selected for the route. */
     private Long vehicleId;
     @NotNull(message = "driverId cannot be null")
     @Positive(message = "driverId must be greater than zero")
+    /** Identifier of the driver selected for the route. */
     private Long driverId;
 
     @Builder
