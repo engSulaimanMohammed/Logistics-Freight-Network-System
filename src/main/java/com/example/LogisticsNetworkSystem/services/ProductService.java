@@ -77,7 +77,12 @@ public class ProductService {
         return product;
     }
 
-    public Product updateProduct(Long id, String name, String sku, Double weightKg, String category) {
+    public Product updateProduct(
+            Long id,
+            String name,
+            String sku,
+            Double weightKg,
+            String category) {
         validateProductData(name, sku, weightKg, category);
         Product product = getById(id);
         product.setName(name);
