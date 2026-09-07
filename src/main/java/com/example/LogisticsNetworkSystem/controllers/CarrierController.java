@@ -49,11 +49,13 @@ public class CarrierController {
         return CarrierDTO.convertToDTO(carrierService.updateCarrier(id, dto.getName(), dto.getContactEmail(), dto.getPhoneNumber(), dto.getCountry()));
     }
 
+/** Returns operational statistics for the carrier identified by {@code id}. */
 @GetMapping("/stats/{id}")
 public CarrierStatsDTO getStats(@PathVariable Long id) {
     return carrierService.getStats(id);
 }
 
+    /** Deletes the selected carrier and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public CarrierDTO delete(@PathVariable Long id) {
         CarrierDTO dto = CarrierDTO.convertToDTO(carrierService.getById(id));
