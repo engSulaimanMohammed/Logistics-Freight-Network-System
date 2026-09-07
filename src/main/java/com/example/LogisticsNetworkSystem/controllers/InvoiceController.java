@@ -41,11 +41,13 @@ public class InvoiceController {
         return InvoiceDTO.convertToDTO(invoiceService.generateInvoice(fromDTO(dto), dto.getShipmentId()));
     }
 
+    /** Returns all invoices as response DTOs. */
     @GetMapping("/getAll")
     public List<InvoiceDTO> getAll() {
         return InvoiceDTO.convertToDTO(invoiceService.getAllInvoices());
     }
 
+    /** Retrieves the invoice identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public InvoiceDTO getById(@PathVariable Long id) {
         return InvoiceDTO.convertToDTO(invoiceService.getById(id));
