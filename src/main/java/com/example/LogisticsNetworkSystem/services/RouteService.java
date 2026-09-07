@@ -81,7 +81,9 @@ public class RouteService {
     }
 
     public List<Route> getAllRoutes() {
-        return routeRepository.findAll().stream().filter(Route::isActive).toList();
+        return routeRepository.findAll().stream()
+                .filter(Route::isActive)
+                .toList();
     }
 
     public Route getById(Long id) {
