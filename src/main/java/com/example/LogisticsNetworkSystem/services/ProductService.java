@@ -65,7 +65,8 @@ public class ProductService {
     }
 
     public Product getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Product ID must be greater than zero");
         }
         Product product = productRepository.findById(id)
