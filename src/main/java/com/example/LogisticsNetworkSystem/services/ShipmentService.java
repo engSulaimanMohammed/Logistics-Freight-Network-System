@@ -1,7 +1,13 @@
 package com.example.LogisticsNetworkSystem.services;
 
 import com.example.LogisticsNetworkSystem.dtos.ShipmentItemDTO;
-import com.example.LogisticsNetworkSystem.entities.*;
+import com.example.LogisticsNetworkSystem.entities.Carrier;
+import com.example.LogisticsNetworkSystem.entities.Customer;
+import com.example.LogisticsNetworkSystem.entities.InventoryItem;
+import com.example.LogisticsNetworkSystem.entities.Product;
+import com.example.LogisticsNetworkSystem.entities.Shipment;
+import com.example.LogisticsNetworkSystem.entities.ShipmentItem;
+import com.example.LogisticsNetworkSystem.entities.Warehouse;
 import com.example.LogisticsNetworkSystem.exceptions.ResourceNotFoundException;
 import com.example.LogisticsNetworkSystem.repositories.InventoryItemRepository;
 import com.example.LogisticsNetworkSystem.repositories.ShipmentItemRepository;
