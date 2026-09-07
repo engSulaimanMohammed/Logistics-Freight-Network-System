@@ -1,5 +1,8 @@
 package com.example.LogisticsNetworkSystem.services;
 
+import java.util.Date;
+import java.util.List;
+
 import com.example.LogisticsNetworkSystem.dtos.ShipmentItemDTO;
 import com.example.LogisticsNetworkSystem.entities.Carrier;
 import com.example.LogisticsNetworkSystem.entities.Customer;
@@ -14,9 +17,6 @@ import com.example.LogisticsNetworkSystem.repositories.ShipmentItemRepository;
 import com.example.LogisticsNetworkSystem.repositories.ShipmentRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-
-import java.util.Date;
-import java.util.List;
 
 @Service
 public class ShipmentService {
