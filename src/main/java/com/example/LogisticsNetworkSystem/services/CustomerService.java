@@ -16,7 +16,9 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final InvoiceRepository invoiceRepository;
 
-    public CustomerService(CustomerRepository customerRepository, InvoiceRepository invoiceRepository) {
+    public CustomerService(
+            CustomerRepository customerRepository,
+            InvoiceRepository invoiceRepository) {
         this.customerRepository = customerRepository;
         this.invoiceRepository = invoiceRepository;
     }
