@@ -41,6 +41,7 @@ public class StaffController {
         return StaffDTO.convertToDTO(staffService.getById(id));
     }
 
+    /** Updates the staff record identified by {@code id} with the validated DTO. */
     @PutMapping("/update/{id}")
     public StaffDTO update(@PathVariable Long id, @Valid @RequestBody StaffDTO dto) {
         return StaffDTO.convertToDTO(staffService.updateStaff(id, dto.getName(), dto.getRole(), dto.getPhoneNumber(), dto.getWarehouseId()));
