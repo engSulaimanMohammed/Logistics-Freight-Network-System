@@ -42,8 +42,8 @@ public class AddressController {
         return AddressDTO.convertToDTO(addressService.getById(id));
     }
 
+    /** Updates the address identified by {@code id} with the validated request DTO. */
     @PutMapping("/update/{id}")
-    // Updates the address identified by the path variable using the request DTO.
     public AddressDTO update(@PathVariable Long id, @Valid @RequestBody AddressDTO dto) {
         return AddressDTO.convertToDTO(addressService.updateAddress(id, dto.getStreet(), dto.getCity(), dto.getPostalCode(), dto.getCountry(), dto.getCustomerId()));
     }
