@@ -38,7 +38,8 @@ public class WarehouseService {
         if (name.length() > 255) {
             throw new IllegalArgumentException("Name cannot exceed 255 characters");
         }
-        if (location == null || location.trim().isEmpty()) {
+        if (location == null
+                || location.trim().isEmpty()) {
             throw new IllegalArgumentException("Location cannot be blank");
         }
         if (location.length() > 255) {
