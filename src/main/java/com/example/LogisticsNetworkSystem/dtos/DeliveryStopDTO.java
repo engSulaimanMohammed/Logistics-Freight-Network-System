@@ -13,6 +13,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries delivery stop details and route or shipment relationships. */
 @Data
 @NoArgsConstructor
 public class DeliveryStopDTO {
