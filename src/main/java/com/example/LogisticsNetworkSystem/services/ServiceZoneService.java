@@ -52,7 +52,9 @@ public class ServiceZoneService {
     }
 
     public List<ServiceZone> getAllServiceZones() {
-        return serviceZoneRepository.findAll().stream().filter(ServiceZone::isActive).toList();
+        return serviceZoneRepository.findAll().stream()
+                .filter(ServiceZone::isActive)
+                .toList();
     }
 
     public ServiceZone getById(Long id) {
