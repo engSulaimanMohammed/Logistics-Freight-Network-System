@@ -18,6 +18,7 @@ public class CarrierStatsDTO {
     private long activeRoutes;
 
     @Builder
+    /** Builds carrier metrics from values transferred through the API. */
     public CarrierStatsDTO(Long carrierId, long vehicles, long drivers, long activeRoutes) {
         this.carrierId = carrierId;
         this.vehicles = vehicles;
