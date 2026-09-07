@@ -108,6 +108,7 @@ public class WarehouseService {
     public boolean deleteById(Long id) {
         Warehouse warehouse = getById(id);
         warehouse.setActive(false);
+
         warehouse.setUpdatedDate(new Date());
         warehouseRepository.save(warehouse);
         return true;
