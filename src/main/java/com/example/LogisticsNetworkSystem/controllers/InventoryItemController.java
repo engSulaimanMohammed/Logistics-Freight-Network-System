@@ -40,6 +40,7 @@ public class InventoryItemController {
         return InventoryItemDTO.convertToDTO(inventoryItemService.getById(id));
     }
 
+    /** Updates the item identified by {@code id} with quantity, location, and associations. */
     @PutMapping("/update/{id}")
     public InventoryItemDTO update(@PathVariable Long id, @Valid @RequestBody InventoryItemDTO dto) {
         return InventoryItemDTO.convertToDTO(inventoryItemService.updateInventoryItem(id, dto.getQuantity(), dto.getShelfLocation(), dto.getWarehouseId(), dto.getProductId()));
