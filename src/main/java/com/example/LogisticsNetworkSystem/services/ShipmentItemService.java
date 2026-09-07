@@ -78,6 +78,7 @@ public class ShipmentItemService {
         shipmentItem.setQuantity(quantity);
         shipmentItem.setShipment(shipment);
         shipmentItem.setProduct(product);
+
         shipmentItem.setUpdatedDate(new Date());
         return shipmentItemRepository.save(shipmentItem);
     }
