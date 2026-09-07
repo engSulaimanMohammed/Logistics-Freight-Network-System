@@ -33,7 +33,9 @@ public class RouteService {
         if (routeDate == null) {
             throw new IllegalArgumentException("Route date cannot be null");
         }
-        if (origin == null || origin.trim().isEmpty()) throw new IllegalArgumentException("Origin cannot be blank");
+        if (origin == null || origin.trim().isEmpty()) {
+            throw new IllegalArgumentException("Origin cannot be blank");
+        }
         if (origin.length() > 255) throw new IllegalArgumentException("Origin cannot exceed 255 characters");
         if (destination == null || destination.trim().isEmpty()) throw new IllegalArgumentException("Destination cannot be blank");
         if (destination.length() > 255) throw new IllegalArgumentException("Destination cannot exceed 255 characters");
