@@ -20,6 +20,7 @@ public class ShipmentController {
         this.shipmentService = shipmentService;
     }
 
+    /** Creates a shipment from the DTO and associates its warehouse, customer, and carrier. */
     @PostMapping("/add")
     public ShipmentDTO add(@Valid @RequestBody ShipmentDTO dto) {
         Shipment shipment = new Shipment();
