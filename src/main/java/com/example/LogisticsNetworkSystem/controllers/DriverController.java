@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/driver")
 public class DriverController {
 
+    /** Coordinates driver persistence and carrier association through the service layer. */
     private final DriverService driverService;
 
     public DriverController(DriverService driverService) {
