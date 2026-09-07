@@ -97,6 +97,7 @@ public class AddressService {
         address.setPostalCode(postalCode);
         address.setCountry(country);
         address.setCustomer(customer);
+
         address.setUpdatedDate(new Date());
         return addressRepository.save(address);
     }
