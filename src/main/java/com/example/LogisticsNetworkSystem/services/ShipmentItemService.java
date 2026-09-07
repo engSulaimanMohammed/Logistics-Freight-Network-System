@@ -86,6 +86,7 @@ public class ShipmentItemService {
     public boolean deleteById(Long id) {
         ShipmentItem shipmentItem = getById(id);
         shipmentItem.setActive(false);
+
         shipmentItem.setUpdatedDate(new Date());
         shipmentItemRepository.save(shipmentItem);
         return true;
