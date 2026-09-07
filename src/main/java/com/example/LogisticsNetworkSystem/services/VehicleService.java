@@ -98,8 +98,8 @@ public class VehicleService {
         return vehicleRepository.save(vehicle);
     }
 
-public List<Vehicle> getAvailableVehicles() {
-    return vehicleRepository.findByStatus("Available");
+    public List<Vehicle> getAvailableVehicles() {
+        return vehicleRepository.findByStatus("Available");
 }
 
     public boolean deleteById(Long id) {
