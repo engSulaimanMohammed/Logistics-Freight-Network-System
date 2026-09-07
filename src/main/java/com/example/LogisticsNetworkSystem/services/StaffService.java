@@ -64,7 +64,8 @@ public class StaffService {
     }
 
     public Staff getById(Long id) {
-        if (id == null || id <= 0) {
+        if (id == null
+                || id <= 0) {
             throw new IllegalArgumentException("Staff ID must be greater than zero");
         }
         Staff staff = staffRepository.findById(id)
