@@ -17,4 +17,8 @@ public record ErrorResponse(
                 LocalDateTime.now()
         );
     }
+
+    public static ErrorResponse from(HttpStatus status, Exception exception) {
+        return from(status, exception.getMessage());
+    }
 }
