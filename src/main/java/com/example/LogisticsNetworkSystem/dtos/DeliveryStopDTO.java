@@ -51,6 +51,7 @@ public class DeliveryStopDTO {
     /** Identifier of the shipment handled at the stop. */
     private Long shipmentId;
 
+    /** Builds a DeliveryStopDTO from values transferred through the API. */
     @Builder
     public DeliveryStopDTO(
             Long id,
@@ -69,6 +70,7 @@ public class DeliveryStopDTO {
         this.shipmentId = shipmentId;
     }
 
+    /** Converts a DeliveryStop entity into its API transfer representation. */
     public static DeliveryStopDTO convertToDTO(DeliveryStop entity) {
         if (entity == null) {
             return null;
@@ -84,6 +86,7 @@ public class DeliveryStopDTO {
                 .build();
     }
 
+    /** Converts a collection of DeliveryStop entities into response DTOs. */
     public static List<DeliveryStopDTO> convertToDTO(List<DeliveryStop> entities) {
         return entities.stream()
                 .map(DeliveryStopDTO::convertToDTO)
