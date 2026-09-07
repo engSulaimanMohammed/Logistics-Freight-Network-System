@@ -55,6 +55,7 @@ public class ShipmentDTO {
     /** Nested item data included with the shipment transfer. */
     private List<ShipmentItemDTO> shipmentItems;
 
+    /** Builds a ShipmentDTO from values transferred through the API. */
     @Builder
     public ShipmentDTO(
             Long id,
