@@ -12,6 +12,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries driver information and the carrier relationship used by the API. */
 @Data
 @NoArgsConstructor
 public class DriverDTO {
