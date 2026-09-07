@@ -53,6 +53,7 @@ public class ShipmentController {
         return ShipmentDTO.convertToDTO(shipmentService.getById(id));
     }
 
+    /** Updates the shipment identified by {@code id} with the validated request DTO. */
     @PutMapping("/update/{id}")
     public ShipmentDTO update(@PathVariable Long id, @Valid @RequestBody ShipmentDTO dto) {
         return ShipmentDTO.convertToDTO(shipmentService.updateShipment(
