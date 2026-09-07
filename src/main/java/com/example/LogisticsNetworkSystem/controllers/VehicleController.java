@@ -30,6 +30,7 @@ public class VehicleController {
         return VehicleDTO.convertToDTO(vehicleService.addVehicle(vehicle, dto.getCarrierId()));
     }
 
+    /** Returns all vehicles as response DTOs. */
     @GetMapping("/getAll")
     public List<VehicleDTO> getAll() {
         return VehicleDTO.convertToDTO(vehicleService.getAllVehicles());
