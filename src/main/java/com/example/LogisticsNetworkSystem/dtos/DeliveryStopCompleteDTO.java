@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries the identifier required to complete a delivery stop. */
 @Data
 @NoArgsConstructor
 public class DeliveryStopCompleteDTO {
