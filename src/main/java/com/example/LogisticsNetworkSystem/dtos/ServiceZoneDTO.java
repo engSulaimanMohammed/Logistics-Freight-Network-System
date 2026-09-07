@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries service zone configuration data between API and application layers. */
 @Data
 @NoArgsConstructor
 public class ServiceZoneDTO {
