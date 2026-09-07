@@ -18,8 +18,8 @@ public class ServiceZone extends BaseClass {
     private String region;
     private Double baseRate;
 
-    @JsonIgnore
     @OneToMany
     @JoinColumn(name = "service_zone_id")
+    @JsonIgnore
     private List<Address> addresses = new ArrayList<>();
 }
