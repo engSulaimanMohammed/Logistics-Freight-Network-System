@@ -29,7 +29,8 @@ public class AddressService {
         if (street.length() > 255) {
             throw new IllegalArgumentException("Street cannot exceed 255 characters");
         }
-        if (city == null || city.trim().isEmpty()) {
+        if (city == null
+                || city.trim().isEmpty()) {
             throw new IllegalArgumentException("City cannot be blank");
         }
         if (city.length() > 255) {
