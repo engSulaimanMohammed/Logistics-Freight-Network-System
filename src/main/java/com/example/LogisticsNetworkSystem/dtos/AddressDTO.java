@@ -44,6 +44,7 @@ public class AddressDTO {
     /** Identifier of the customer associated with the address. */
     private Long customerId;
 
+    /** Builds a AddressDTO from values transferred through the API. */
     @Builder
     public AddressDTO(
             Long id,
@@ -60,6 +61,7 @@ public class AddressDTO {
         this.customerId = customerId;
     }
 
+    /** Converts an Address entity into its API transfer representation. */
     public static AddressDTO convertToDTO(Address entity) {
         if (entity == null) {
             return null;
@@ -74,6 +76,7 @@ public class AddressDTO {
                 .build();
     }
 
+    /** Converts a collection of Address entities into response DTOs. */
     public static List<AddressDTO> convertToDTO(List<Address> entities) {
         return entities.stream()
                 .map(AddressDTO::convertToDTO)
