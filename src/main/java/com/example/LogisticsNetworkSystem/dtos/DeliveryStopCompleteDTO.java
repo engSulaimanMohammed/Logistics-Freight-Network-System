@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class DeliveryStopCompleteDTO {
     @NotNull(message = "deliveryStopId cannot be null")
     @Positive(message = "deliveryStopId must be greater than zero")
+    /** Identifier of the delivery stop to mark as complete. */
     private Long deliveryStopId;
 
     @Builder
