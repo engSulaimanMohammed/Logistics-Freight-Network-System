@@ -16,6 +16,7 @@ public class WarehouseStatsDTO {
     private long totalInventoryUnits;
 
     @Builder
+    /** Builds warehouse metrics from values transferred through the API. */
     public WarehouseStatsDTO(Long warehouseId, long activeShipments, long totalInventoryUnits) {
         this.warehouseId = warehouseId;
         this.activeShipments = activeShipments;
