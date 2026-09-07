@@ -44,6 +44,7 @@ public class VehicleDTO {
     /** Identifier of the carrier responsible for the vehicle. */
     private Long carrierId;
 
+    /** Builds a VehicleDTO from values transferred through the API. */
     @Builder
     public VehicleDTO(
             Long id,
