@@ -34,6 +34,7 @@ public class WarehouseDTO {
     /** Storage capacity recorded for the warehouse. */
     private Integer capacity;
 
+    /** Builds a WarehouseDTO from values transferred through the API. */
     @Builder
     public WarehouseDTO(
             Long id,
