@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Route extends BaseClass {
     private Date routeDate;
     private String origin;
