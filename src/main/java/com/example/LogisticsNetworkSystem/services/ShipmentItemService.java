@@ -5,8 +5,6 @@ import com.example.LogisticsNetworkSystem.entities.Shipment;
 import com.example.LogisticsNetworkSystem.entities.ShipmentItem;
 import com.example.LogisticsNetworkSystem.exceptions.ResourceNotFoundException;
 import com.example.LogisticsNetworkSystem.repositories.ShipmentItemRepository;
-import com.example.LogisticsNetworkSystem.services.ProductService;
-import com.example.LogisticsNetworkSystem.services.ShipmentService;
 import java.util.Date;
 import java.util.List;
 import org.springframework.stereotype.Service;
