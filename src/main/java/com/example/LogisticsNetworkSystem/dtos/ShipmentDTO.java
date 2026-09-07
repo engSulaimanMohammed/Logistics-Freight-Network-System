@@ -15,6 +15,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/** Carries shipment details, relationships, and nested shipment items. */
 @Data
 @NoArgsConstructor
 public class ShipmentDTO {
