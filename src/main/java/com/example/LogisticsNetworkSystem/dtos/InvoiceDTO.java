@@ -18,25 +18,31 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class InvoiceDTO {
 
+    /** Unique identifier of the invoice. */
     private Long id;
 
     @NotNull(message = "amount cannot be null")
     @Positive(message = "amount must be greater than zero")
+    /** Invoice amount represented for the associated transaction. */
     private Double amount;
 
     @NotBlank(message = "status cannot be blank")
     @Size(max = 255, message = "status cannot exceed 255 characters")
+    /** Current payment or processing status of the invoice. */
     private String status;
 
     @NotNull(message = "issuedDate cannot be null")
     @PastOrPresent(message = "issuedDate cannot be in the future")
+    /** Date on which the invoice was issued. */
     private Date issuedDate;
 
     @NotNull(message = "shipmentId cannot be null")
     @Positive(message = "shipmentId must be greater than zero")
+    /** Identifier of the shipment billed by the invoice. */
     private Long shipmentId;
 
     @Positive(message = "customerId must be greater than zero")
+    /** Optional identifier of the customer billed by the invoice. */
     private Long customerId;
 
     @Builder
