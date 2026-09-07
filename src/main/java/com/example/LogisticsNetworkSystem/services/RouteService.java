@@ -44,7 +44,9 @@ public class RouteService {
     }
 
     public Route addRoute(Route route, Long vehicleId, Long driverId) {
-        if (route == null) throw new IllegalArgumentException("Route cannot be null");
+        if (route == null) {
+            throw new IllegalArgumentException("Route cannot be null");
+        }
         validateRouteData(route.getRouteDate(), route.getOrigin(), route.getDestination(), route.getStatus());
         route.setVehicle(vehicleService.getById(vehicleId));
         route.setDriver(driverService.getById(driverId));
