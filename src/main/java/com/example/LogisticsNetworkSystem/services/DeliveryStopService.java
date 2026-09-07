@@ -57,7 +57,9 @@ public class DeliveryStopService {
     }
 
     public List<DeliveryStop> getAllDeliveryStops() {
-        return deliveryStopRepository.findAll().stream().filter(DeliveryStop::isActive).toList();
+        return deliveryStopRepository.findAll().stream()
+                .filter(DeliveryStop::isActive)
+                .toList();
     }
 
     public DeliveryStop getById(Long id) {
