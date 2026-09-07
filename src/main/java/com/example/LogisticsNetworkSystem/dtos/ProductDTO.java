@@ -16,22 +16,27 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProductDTO {
 
+    /** Unique identifier of the product. */
     private Long id;
 
     @NotBlank(message = "name cannot be blank")
     @Size(max = 255, message = "name cannot exceed 255 characters")
+    /** Product name presented through the API. */
     private String name;
 
     @NotBlank(message = "sku cannot be blank")
     @Size(max = 255, message = "sku cannot exceed 255 characters")
+    /** Stock keeping unit used to identify the product. */
     private String sku;
 
     @NotNull(message = "weightKg cannot be null")
     @Positive(message = "weightKg must be greater than zero")
+    /** Product weight expressed in kilograms. */
     private Double weightKg;
 
     @NotBlank(message = "category cannot be blank")
     @Size(max = 255, message = "category cannot exceed 255 characters")
+    /** Catalog category assigned to the product. */
     private String category;
 
     @Builder
