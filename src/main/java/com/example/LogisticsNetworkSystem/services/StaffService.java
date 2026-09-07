@@ -22,7 +22,8 @@ public class StaffService {
     }
 
     private void validateStaffData(String name, String role, String phoneNumber) {
-        if (name == null || name.trim().isEmpty()) {
+        if (name == null
+                || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be blank");
         }
         if (name.length() > 255) {
