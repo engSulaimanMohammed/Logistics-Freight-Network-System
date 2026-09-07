@@ -20,6 +20,7 @@ public class WarehouseController {
         this.warehouseService = warehouseService;
     }
 
+    /** Creates a warehouse from the validated request DTO. */
     @PostMapping("/add")
     public WarehouseDTO add(@Valid @RequestBody WarehouseDTO dto) {
         Warehouse warehouse = new Warehouse();
