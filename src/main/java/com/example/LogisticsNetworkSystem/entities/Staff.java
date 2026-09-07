@@ -2,6 +2,7 @@ package com.example.LogisticsNetworkSystem.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+
 import lombok.Getter;
 import lombok.Setter;
 
