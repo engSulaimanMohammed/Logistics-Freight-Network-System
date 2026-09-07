@@ -18,11 +18,11 @@ public class Product extends BaseClass {
     private Double weightKg;
     private String category;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "product")
+    @JsonIgnore
     private List<InventoryItem> inventoryItems = new ArrayList<>();
 
-    @JsonIgnore
     @OneToMany(mappedBy = "product")
+    @JsonIgnore
     private List<ShipmentItem> shipmentItems = new ArrayList<>();
 }
