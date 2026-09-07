@@ -9,9 +9,9 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Vehicle extends BaseClass {
     private String plateNumber;
     private String type;
