@@ -46,6 +46,7 @@ public class TrackingEventDTO {
     /** Identifier of the shipment associated with the event. */
     private Long shipmentId;
 
+    /** Builds a TrackingEventDTO from values transferred through the API. */
     @Builder
     public TrackingEventDTO(
             Long id,
