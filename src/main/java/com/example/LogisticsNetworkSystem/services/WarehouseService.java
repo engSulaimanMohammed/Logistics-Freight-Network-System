@@ -31,7 +31,8 @@ public class WarehouseService {
             String name,
             String location,
             Integer capacity) {
-        if (name == null || name.trim().isEmpty()) {
+        if (name == null
+                || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be blank");
         }
         if (name.length() > 255) {
