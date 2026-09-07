@@ -10,7 +10,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InventoryItemRepository extends JpaRepository<InventoryItem, Long> {
-    Optional<InventoryItem> findByWarehouse_IdAndProduct_IdAndIsActiveTrue(Long warehouseId, Long productId);
+    Optional<InventoryItem> findByWarehouse_IdAndProduct_IdAndIsActiveTrue(
+            Long warehouseId,
+            Long productId
+    );
 
     @Query("SELECT i FROM InventoryItem i WHERE i.quantity < :threshold AND i.isActive = true")
     List<InventoryItem> findBelowReorderThreshold(@Param("threshold") Integer threshold);
