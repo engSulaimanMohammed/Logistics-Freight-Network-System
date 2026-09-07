@@ -5,9 +5,9 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Address extends BaseClass {
     private String street;
     private String city;
