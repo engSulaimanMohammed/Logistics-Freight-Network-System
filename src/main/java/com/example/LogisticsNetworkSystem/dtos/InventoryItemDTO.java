@@ -55,6 +55,7 @@ public class InventoryItemDTO {
         this.productId = productId;
     }
 
+    /** Converts a InventoryItem entity into its API transfer representation. */
     public static InventoryItemDTO convertToDTO(InventoryItem entity) {
         if (entity == null) {
             return null;
@@ -68,6 +69,7 @@ public class InventoryItemDTO {
                 .build();
     }
 
+    /** Converts a collection of InventoryItem entities into response DTOs. */
     public static List<InventoryItemDTO> convertToDTO(List<InventoryItem> entities) {
         return entities.stream()
                 .map(InventoryItemDTO::convertToDTO)
