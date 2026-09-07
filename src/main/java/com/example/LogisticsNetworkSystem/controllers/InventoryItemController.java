@@ -19,6 +19,7 @@ public class InventoryItemController {
         this.inventoryItemService = inventoryItemService;
     }
 
+    /** Creates an inventory item from the DTO and links it to a warehouse and product. */
     @PostMapping("/add")
     public InventoryItemDTO add(@Valid @RequestBody InventoryItemDTO dto) {
         InventoryItem inventoryItem = new InventoryItem();
