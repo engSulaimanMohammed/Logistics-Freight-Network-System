@@ -100,7 +100,8 @@ public class WarehouseService {
     return WarehouseStatsDTO.builder()
             .warehouseId(warehouseId)
             .activeShipments(activeShipments)
-            .totalInventoryUnits(totalUnits == null ? 0 : totalUnits)
+            .totalInventoryUnits(
+                    totalUnits == null ? 0 : totalUnits)
             .build();
 }
 
