@@ -31,6 +31,7 @@ public class CustomerController {
         return CustomerDTO.convertToDTO(customerService.addCustomer(customer));
     }
 
+    /** Returns all customers as response DTOs. */
     @GetMapping("/getAll")
     public List<CustomerDTO> getAll() {
         return CustomerDTO.convertToDTO(customerService.getAllCustomers());
