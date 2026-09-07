@@ -61,6 +61,7 @@ public class VehicleDTO {
         this.carrierId = carrierId;
     }
 
+    /** Converts a Vehicle entity into its API transfer representation. */
     public static VehicleDTO convertToDTO(Vehicle entity) {
         if (entity == null) {
             return null;
@@ -75,6 +76,7 @@ public class VehicleDTO {
                 .build();
     }
 
+    /** Converts a collection of Vehicle entities into response DTOs. */
     public static List<VehicleDTO> convertToDTO(List<Vehicle> entities) {
         return entities.stream()
                 .map(VehicleDTO::convertToDTO)
