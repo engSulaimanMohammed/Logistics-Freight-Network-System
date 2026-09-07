@@ -16,6 +16,7 @@ public class DeliveryStopCompleteDTO {
     private Long deliveryStopId;
 
     @Builder
+    /** Builds a completion request from the target stop identifier. */
     public DeliveryStopCompleteDTO(Long deliveryStopId) {
         this.deliveryStopId = deliveryStopId;
     }
