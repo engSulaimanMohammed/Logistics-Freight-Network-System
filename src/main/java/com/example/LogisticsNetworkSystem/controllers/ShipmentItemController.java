@@ -27,6 +27,7 @@ public class ShipmentItemController {
         return ShipmentItemDTO.convertToDTO(shipmentItemService.addShipmentItem(shipmentItem, dto.getShipmentId(), dto.getProductId()));
     }
 
+    /** Returns all shipment items as response DTOs. */
     @GetMapping("/getAll")
     public List<ShipmentItemDTO> getAll() {
         return ShipmentItemDTO.convertToDTO(shipmentItemService.getAllShipmentItems());
