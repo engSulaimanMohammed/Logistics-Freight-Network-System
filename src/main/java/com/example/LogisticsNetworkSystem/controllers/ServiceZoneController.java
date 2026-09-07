@@ -35,8 +35,8 @@ public class ServiceZoneController {
         return ServiceZoneDTO.convertToDTO(serviceZoneService.getAllServiceZones());
     }
 
+    /** Retrieves the service zone identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
-    // Retrieves a service zone by its unique identifier.
     public ServiceZoneDTO getById(@PathVariable Long id) {
         return ServiceZoneDTO.convertToDTO(serviceZoneService.getById(id));
     }
