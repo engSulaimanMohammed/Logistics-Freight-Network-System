@@ -113,6 +113,7 @@ public class CustomerService {
     public boolean deleteById(Long id) {
         Customer customer = getById(id);
         customer.setActive(false);
+
         customer.setUpdatedDate(new Date());
         customerRepository.save(customer);
         return true;
