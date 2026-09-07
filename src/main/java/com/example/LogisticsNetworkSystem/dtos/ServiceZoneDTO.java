@@ -34,6 +34,7 @@ public class ServiceZoneDTO {
     /** Base rate applied to the service zone. */
     private Double baseRate;
 
+    /** Builds a ServiceZoneDTO from values transferred through the API. */
     @Builder
     public ServiceZoneDTO(
             Long id,
@@ -46,6 +47,7 @@ public class ServiceZoneDTO {
         this.baseRate = baseRate;
     }
 
+    /** Converts a ServiceZone entity into its API transfer representation. */
     public static ServiceZoneDTO convertToDTO(ServiceZone entity) {
         if (entity == null) {
             return null;
@@ -58,6 +60,7 @@ public class ServiceZoneDTO {
                 .build();
     }
 
+    /** Converts a collection of ServiceZone entities into response DTOs. */
     public static List<ServiceZoneDTO> convertToDTO(List<ServiceZone> entities) {
         return entities.stream()
                 .map(ServiceZoneDTO::convertToDTO)
