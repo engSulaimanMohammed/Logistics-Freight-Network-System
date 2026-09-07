@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
+/** Exposes REST operations for carrier management and carrier statistics. */
 @RestController
 @RequestMapping("/carrier")
 public class CarrierController {
