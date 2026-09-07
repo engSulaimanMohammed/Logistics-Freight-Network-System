@@ -24,7 +24,8 @@ public class CustomerService {
     }
 
     private void validateCustomerData(String name, String email, String phoneNumber, String type) {
-        if (name == null || name.trim().isEmpty()) {
+        if (name == null
+                || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be blank");
         }
         if (name.length() > 255) {
