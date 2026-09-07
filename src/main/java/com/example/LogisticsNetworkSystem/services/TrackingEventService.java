@@ -73,7 +73,9 @@ public class TrackingEventService {
     }
 
     public TrackingEvent getById(Long id) {
-        if (id == null || id <= 0) throw new IllegalArgumentException("TrackingEvent ID must be greater than zero");
+        if (id == null || id <= 0) {
+            throw new IllegalArgumentException("TrackingEvent ID must be greater than zero");
+        }
         TrackingEvent event = trackingEventRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("TrackingEvent not found with id: " + id));
         if (!event.isActive()) throw new ResourceNotFoundException("TrackingEvent not found with id: " + id);
