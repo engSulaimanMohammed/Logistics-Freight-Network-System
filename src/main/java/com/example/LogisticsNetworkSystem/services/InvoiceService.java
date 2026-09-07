@@ -66,7 +66,9 @@ public class InvoiceService {
     }
 
     public List<Invoice> getAllInvoices() {
-        return invoiceRepository.findAll().stream().filter(Invoice::isActive).toList();
+        return invoiceRepository.findAll().stream()
+                .filter(Invoice::isActive)
+                .toList();
     }
 
     public Invoice getById(Long id) {
