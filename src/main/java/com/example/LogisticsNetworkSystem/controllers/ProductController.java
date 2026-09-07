@@ -19,6 +19,7 @@ public class ProductController {
         this.productService = productService;
     }
 
+    /** Creates a product from the validated request DTO. */
     @PostMapping("/add")
     public ProductDTO add(@Valid @RequestBody ProductDTO dto) {
         Product product = new Product();
