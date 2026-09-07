@@ -64,7 +64,9 @@ public class DriverService {
     }
 
     public List<Driver> getAllDrivers() {
-        return driverRepository.findAll().stream().filter(Driver::isActive).toList();
+        return driverRepository.findAll().stream()
+                .filter(Driver::isActive)
+                .toList();
     }
 
     public Driver getById(Long id) {
