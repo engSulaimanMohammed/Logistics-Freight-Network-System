@@ -30,6 +30,7 @@ public class WarehouseController {
         return WarehouseDTO.convertToDTO(warehouseService.addWarehouse(warehouse));
     }
 
+    /** Returns all warehouses as response DTOs. */
     @GetMapping("/getAll")
     public List<WarehouseDTO> getAll() {
         return WarehouseDTO.convertToDTO(warehouseService.getAllWarehouses());
