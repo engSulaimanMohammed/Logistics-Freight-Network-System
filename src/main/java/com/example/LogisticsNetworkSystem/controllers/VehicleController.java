@@ -19,6 +19,7 @@ public class VehicleController {
         this.vehicleService = vehicleService;
     }
 
+    /** Creates a vehicle from the validated DTO and associates it with a carrier. */
     @PostMapping("/add")
     public VehicleDTO add(@Valid @RequestBody VehicleDTO dto) {
         Vehicle vehicle = new Vehicle();
