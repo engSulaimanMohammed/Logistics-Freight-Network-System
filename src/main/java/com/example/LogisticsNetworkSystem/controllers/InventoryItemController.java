@@ -46,11 +46,13 @@ public class InventoryItemController {
         return InventoryItemDTO.convertToDTO(inventoryItemService.updateInventoryItem(id, dto.getQuantity(), dto.getShelfLocation(), dto.getWarehouseId(), dto.getProductId()));
     }
 
+/** Returns items whose stock is below the supplied {@code threshold}. */
 @GetMapping("/belowThreshold/{threshold}")
 public List<InventoryItemDTO> getBelowThreshold(@PathVariable Integer threshold) {
     return InventoryItemDTO.convertToDTO(inventoryItemService.getBelowReorderThreshold(threshold));
 }
 
+    /** Deletes the selected inventory item and returns its DTO representation. */
     @DeleteMapping("/delete/{id}")
     public InventoryItemDTO delete(@PathVariable Long id) {
         InventoryItemDTO dto = InventoryItemDTO.convertToDTO(inventoryItemService.getById(id));
