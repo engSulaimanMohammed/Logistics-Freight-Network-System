@@ -72,7 +72,9 @@ public class InvoiceService {
     }
 
     public Invoice getById(Long id) {
-        if (id == null || id <= 0) throw new IllegalArgumentException("Invoice ID must be greater than zero");
+        if (id == null || id <= 0) {
+            throw new IllegalArgumentException("Invoice ID must be greater than zero");
+        }
         Invoice invoice = invoiceRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Invoice not found with id: " + id));
         if (!invoice.isActive()) throw new ResourceNotFoundException("Invoice not found with id: " + id);
