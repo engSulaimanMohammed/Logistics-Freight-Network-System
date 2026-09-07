@@ -36,6 +36,7 @@ public class VehicleController {
         return VehicleDTO.convertToDTO(vehicleService.getAllVehicles());
     }
 
+    /** Retrieves the vehicle identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public VehicleDTO getById(@PathVariable Long id) {
         return VehicleDTO.convertToDTO(vehicleService.getById(id));
