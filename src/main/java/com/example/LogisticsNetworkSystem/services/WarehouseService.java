@@ -93,8 +93,8 @@ public class WarehouseService {
         return warehouseRepository.save(warehouse);
     }
 
-public WarehouseStatsDTO getStats(Long warehouseId) {
-    getById(warehouseId);
+    public WarehouseStatsDTO getStats(Long warehouseId) {
+        getById(warehouseId);
     long activeShipments = shipmentRepository.countActiveShipmentsByWarehouse(warehouseId);
     Long totalUnits = inventoryItemRepository.totalInventoryUnitsByWarehouse(warehouseId);
     return WarehouseStatsDTO.builder()
