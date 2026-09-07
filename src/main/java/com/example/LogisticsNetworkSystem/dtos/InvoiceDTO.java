@@ -62,6 +62,7 @@ public class InvoiceDTO {
         this.customerId = customerId;
     }
 
+    /** Converts a Invoice entity into its API transfer representation. */
     public static InvoiceDTO convertToDTO(Invoice entity) {
         if (entity == null) {
             return null;
@@ -76,6 +77,7 @@ public class InvoiceDTO {
                 .build();
     }
 
+    /** Converts a collection of Invoice entities into response DTOs. */
     public static List<InvoiceDTO> convertToDTO(List<Invoice> entities) {
         return entities.stream()
                 .map(InvoiceDTO::convertToDTO)
