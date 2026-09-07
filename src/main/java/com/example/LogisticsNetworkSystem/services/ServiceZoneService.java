@@ -70,7 +70,11 @@ public class ServiceZoneService {
         return serviceZone;
     }
 
-    public ServiceZone updateServiceZone(Long id, String name, String region, Double baseRate) {
+    public ServiceZone updateServiceZone(
+            Long id,
+            String name,
+            String region,
+            Double baseRate) {
         validateServiceZoneData(name, region, baseRate);
         ServiceZone serviceZone = getById(id);
         serviceZone.setName(name);
