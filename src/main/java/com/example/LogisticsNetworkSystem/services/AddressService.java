@@ -64,7 +64,9 @@ public class AddressService {
     }
 
     public List<Address> getAllAddresss() {
-        return addressRepository.findAll().stream().filter(Address::isActive).toList();
+        return addressRepository.findAll().stream()
+                .filter(Address::isActive)
+                .toList();
     }
 
     public Address getById(Long id) {
