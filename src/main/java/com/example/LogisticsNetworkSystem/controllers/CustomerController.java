@@ -37,6 +37,7 @@ public class CustomerController {
         return CustomerDTO.convertToDTO(customerService.getAllCustomers());
     }
 
+    /** Retrieves the customer identified by the {@code id} path variable. */
     @GetMapping("/getById/{id}")
     public CustomerDTO getById(@PathVariable Long id) {
         return CustomerDTO.convertToDTO(customerService.getById(id));
