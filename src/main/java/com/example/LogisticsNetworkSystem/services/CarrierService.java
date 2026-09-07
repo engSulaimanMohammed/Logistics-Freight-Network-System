@@ -20,7 +20,11 @@ public class CarrierService {
     private final DriverRepository driverRepository;
     private final RouteRepository routeRepository;
 
-    public CarrierService(CarrierRepository carrierRepository, VehicleRepository vehicleRepository, DriverRepository driverRepository, RouteRepository routeRepository) {
+    public CarrierService(
+            CarrierRepository carrierRepository,
+            VehicleRepository vehicleRepository,
+            DriverRepository driverRepository,
+            RouteRepository routeRepository) {
         this.carrierRepository = carrierRepository;
         this.vehicleRepository = vehicleRepository;
         this.driverRepository = driverRepository;
