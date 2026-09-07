@@ -30,7 +30,9 @@ public class RouteService {
     }
 
     private void validateRouteData(Date routeDate, String origin, String destination, String status) {
-        if (routeDate == null) throw new IllegalArgumentException("Route date cannot be null");
+        if (routeDate == null) {
+            throw new IllegalArgumentException("Route date cannot be null");
+        }
         if (origin == null || origin.trim().isEmpty()) throw new IllegalArgumentException("Origin cannot be blank");
         if (origin.length() > 255) throw new IllegalArgumentException("Origin cannot exceed 255 characters");
         if (destination == null || destination.trim().isEmpty()) throw new IllegalArgumentException("Destination cannot be blank");
