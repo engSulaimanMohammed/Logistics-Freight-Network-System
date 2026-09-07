@@ -48,7 +48,8 @@ public class StaffService {
         if (staff == null) {
             throw new IllegalArgumentException("Staff cannot be null");
         }
-        validateStaffData(staff.getName(), staff.getRole(), staff.getPhoneNumber());
+        validateStaffData(
+                staff.getName(), staff.getRole(), staff.getPhoneNumber());
         Warehouse warehouse = warehouseService.getById(warehouseId);
         staff.setWarehouse(warehouse);
         staff.setActive(true);
