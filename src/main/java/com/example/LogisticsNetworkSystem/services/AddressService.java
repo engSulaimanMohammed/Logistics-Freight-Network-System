@@ -14,7 +14,9 @@ public class AddressService {
     private final AddressRepository addressRepository;
     private final CustomerService customerService;
 
-    public AddressService(AddressRepository addressRepository, CustomerService customerService) {
+    public AddressService(
+            AddressRepository addressRepository,
+            CustomerService customerService) {
         this.addressRepository = addressRepository;
         this.customerService = customerService;
     }
