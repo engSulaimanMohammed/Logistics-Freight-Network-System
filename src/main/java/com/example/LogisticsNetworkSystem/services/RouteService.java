@@ -87,7 +87,9 @@ public class RouteService {
     }
 
     public Route getById(Long id) {
-        if (id == null || id <= 0) throw new IllegalArgumentException("Route ID must be greater than zero");
+        if (id == null || id <= 0) {
+            throw new IllegalArgumentException("Route ID must be greater than zero");
+        }
         Route route = routeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Route not found with id: " + id));
         if (!route.isActive()) throw new ResourceNotFoundException("Route not found with id: " + id);
