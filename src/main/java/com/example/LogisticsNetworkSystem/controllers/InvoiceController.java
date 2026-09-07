@@ -28,6 +28,7 @@ public class InvoiceController {
         return invoice;
     }
 
+    /** Creates an invoice and associates it with the requested shipment and customer. */
     @PostMapping("/add")
     public InvoiceDTO add(@Valid @RequestBody InvoiceDTO dto) {
         return InvoiceDTO.convertToDTO(invoiceService.addInvoice(
