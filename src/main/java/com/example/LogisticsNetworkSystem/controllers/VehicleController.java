@@ -42,6 +42,7 @@ public class VehicleController {
         return VehicleDTO.convertToDTO(vehicleService.getById(id));
     }
 
+    /** Updates the vehicle identified by {@code id} with the validated DTO fields. */
     @PutMapping("/update/{id}")
     public VehicleDTO update(@PathVariable Long id, @Valid @RequestBody VehicleDTO dto) {
         return VehicleDTO.convertToDTO(vehicleService.updateVehicle(id, dto.getPlateNumber(), dto.getType(), dto.getCapacityKg(), dto.getStatus(), dto.getCarrierId()));
