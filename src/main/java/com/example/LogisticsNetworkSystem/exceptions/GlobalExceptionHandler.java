@@ -13,26 +13,33 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {
         HttpStatus status = HttpStatus.NOT_FOUND;
-        return ResponseEntity.status(status).body(ErrorResponse.from(status, ex));
+        return createResponse(status, ErrorResponse.from(status, ex));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex) {
         HttpStatus status = HttpStatus.BAD_REQUEST;
         String message = formatValidationMessage(ex);
-        return ResponseEntity.status(status).body(ErrorResponse.from(status, message));
+        return createResponse(status, ErrorResponse.from(status, message));
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorResponse> handleBadRequest(IllegalArgumentException ex) {
         HttpStatus status = HttpStatus.BAD_REQUEST;
-        return ResponseEntity.status(status).body(ErrorResponse.from(status, ex));
+        return createResponse(status, ErrorResponse.from(status, ex));
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGeneric(Exception ex) {
         HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
-        return ResponseEntity.status(status).body(ErrorResponse.from(status, ex));
+        return createResponse(status, ErrorResponse.from(status, ex));
+    }
+
+    private static ResponseEntity<ErrorResponse> createResponse(
+            HttpStatus status,
+            ErrorResponse errorResponse
+    ) {
+        return ResponseEntity.status(status).body(errorResponse);
     }
 
     private static String formatValidationMessage(MethodArgumentNotValidException exception) {
