@@ -91,8 +91,8 @@ public class InventoryItemService {
         return inventoryItemRepository.save(inventoryItem);
     }
 
-public List<InventoryItem> getBelowReorderThreshold(Integer threshold) {
-    if (threshold == null || threshold < 0) {
+    public List<InventoryItem> getBelowReorderThreshold(Integer threshold) {
+        if (threshold == null || threshold < 0) {
         throw new IllegalArgumentException("Threshold cannot be negative");
     }
     return inventoryItemRepository.findBelowReorderThreshold(threshold);
