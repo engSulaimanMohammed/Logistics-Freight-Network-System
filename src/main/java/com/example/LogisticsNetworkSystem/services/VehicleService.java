@@ -14,7 +14,9 @@ public class VehicleService {
     private final VehicleRepository vehicleRepository;
     private final CarrierService carrierService;
 
-    public VehicleService(VehicleRepository vehicleRepository, CarrierService carrierService) {
+    public VehicleService(
+            VehicleRepository vehicleRepository,
+            CarrierService carrierService) {
         this.vehicleRepository = vehicleRepository;
         this.carrierService = carrierService;
     }
