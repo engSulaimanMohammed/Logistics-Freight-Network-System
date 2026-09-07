@@ -5,9 +5,9 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
+@Entity
 public class Staff extends BaseClass {
     private String name;
     private String role;
