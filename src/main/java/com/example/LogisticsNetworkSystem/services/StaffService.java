@@ -58,7 +58,9 @@ public class StaffService {
     }
 
     public List<Staff> getAllStaffs() {
-        return staffRepository.findAll().stream().filter(Staff::isActive).toList();
+        return staffRepository.findAll().stream()
+                .filter(Staff::isActive)
+                .toList();
     }
 
     public Staff getById(Long id) {
