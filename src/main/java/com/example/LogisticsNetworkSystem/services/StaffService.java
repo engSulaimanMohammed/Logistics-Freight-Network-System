@@ -88,6 +88,7 @@ public class StaffService {
         staff.setName(name);
         staff.setRole(role);
         staff.setPhoneNumber(phoneNumber);
+
         staff.setWarehouse(warehouse);
         staff.setUpdatedDate(new Date());
         return staffRepository.save(staff);
